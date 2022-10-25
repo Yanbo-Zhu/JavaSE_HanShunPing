@@ -71,3 +71,14 @@ Password: cchc
 第27章 正则表达式(P878 - P904)
 
 第28章 算法优化体验课 - 骑士周游问题(P905 - P910)
+
+# 第四阶段
+
+java8 和 java11 特性
+
+Stream API
+Lambda 表达式
+新日期时间 API
+接口默认方法
+
+ 宋红康 - 全网最全Java零基础入门教程：https://www.bilibili.com/video/BV1Kb411W75N （只看 Java 8， 9， 11  部分即可， ab 664 ）
