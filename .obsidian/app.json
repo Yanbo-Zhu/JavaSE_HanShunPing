@@ -1,1 +1,16 @@
-{}
+{
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "de",
+    "en-US"
+  ],
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./image",
+  "promptDelete": false,
+  "livePreview": false,
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true
+}
