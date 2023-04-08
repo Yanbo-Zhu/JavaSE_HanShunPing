@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "f4df29cb5596b619",
+        "id": "6e10af10c99c6c25",
         "type": "tabs",
         "children": [
           {
-            "id": "f37015452fa26388",
+            "id": "796bbbf185e55c0e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Phase01/Chapter05_程序控制结构/0103.总览.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "c7b0b1bd81fe0959",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -159,41 +138,49 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c7b0b1bd81fe0959",
+  "active": "796bbbf185e55c0e",
   "lastOpenFiles": [
-    "Phase01/Chapter08_面向对象编程(中级部分)/0278.访问修饰符Modifier.md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0305.多态polymorphic.md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230408005325.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0285.继承inherit或extend.md",
+    "Phase01/Chapter07_面向对象编程(基础部分)/0197.创建对象和访问对象的属性(成员变量).md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0301.类的方法的重写覆盖 overwrite.md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407230810.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407230801.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407225152.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407224818.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407224643.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0280.封装Encapsulation.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口Interface",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.6抽象类.md",
+    "Phase02/Chapter12_异常expection",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.5 final 关键字.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.2理解main方法语法.md",
+    "Content.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image",
+    "Phase02",
+    "Phase01/Chapter08_面向对象编程(中级部分)/03xx.object类详解.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407214838.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407214654.png",
     "Phase01/Chapter08_面向对象编程(中级部分)/0271.包.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0285.继承inherit.md",
-    "Phase01/Chapter05_程序控制结构/Try-Catch and Throws.md",
     "Phase01/Chapter05_程序控制结构/0103.总览.md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407210554.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407203337.png",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0278.访问修饰符Modifier.md",
+    "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
+    "Phase01/Chapter05_程序控制结构/Try-Catch and Throws.md",
     "Phase01/Chapter07_面向对象编程(基础部分)/0201.对象的方法(成员函数).md",
     "Phase01/Chapter07_面向对象编程(基础部分)/0210.成员函数的传参机制.md",
     "Phase01/Chapter07_面向对象编程(基础部分)/0195.类的成员变量 (就是类的属性).md",
     "Phase01/Chapter07_面向对象编程(基础部分)/0193.类和对象的概述.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0197.创建对象和访问对象的属性(成员变量).md",
     "Phase01/Chapter03_变量/0039.数据类型.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0280.封装Encapsulation.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
     "Phase01/Chapter03_变量/0045.javaAPI.md",
     "Phase01/Chapter03_变量/0051.自动的进行数据类型转换.md",
     "Phase01/Chapter03_变量/0054.强制去进行类型转换.md",
-    "Phase01/Chapter03_变量/0055.类型转换习题.md",
-    "Phase01/Chapter03_变量/0057.基本数据类型和String类型的转换.md",
-    "Phase01/Chapter03_变量/image/Pasted image 20230403181703.png",
-    "Phase01/Chapter03_变量/image/Pasted image 20230403181513.png",
     "Phase01/Chapter03_变量/image",
-    "Phase01/Chapter03_变量/0038.加号使用.md",
-    "Phase01/Chapter03_变量/0034_bis0038_变量原理.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0239.类的构造函数_constructor.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0236.作用域Scope.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0233.成员函数_可变参数_varyingParameter.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0245.this关键字.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0243.对象创建流程.md",
-    "Phase01/Chapter02_Java概述/0017_Java运行机制.md",
-    "Phase01/Chapter02_Java概述/image/Pasted image 20230403175603.png",
-    "Phase01/Chapter02_Java概述/image/Pasted image 20230403175529.png",
-    "Phase01/Chapter02_Java概述/image/Pasted image 20230403175426.png",
-    "Phase01/Chapter02_Java概述/image/Pasted image 20230403175402.png",
     "Phase01/Chapter02_Java概述/image",
     "Phase01/Chapter08_面向对象编程(中级部分)/image",
     "韩顺平_循序渐进学Java零基础【完整笔记】.pdf"
