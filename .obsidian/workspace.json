@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "6e10af10c99c6c25",
+        "id": "6514269058e52300",
         "type": "tabs",
         "children": [
           {
-            "id": "796bbbf185e55c0e",
+            "id": "fee084af355df5d2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Phase02/Chapter11_枚举Enum和注解Annonation/0432.注解Annonation.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "a7cae71016e75a8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md"
+              }
             }
           }
         ],
@@ -138,51 +159,53 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "796bbbf185e55c0e",
+  "active": "a7cae71016e75a8c",
   "lastOpenFiles": [
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409013021.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012735.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012625.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012610.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012513.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012447.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012333.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012233.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.5 final关键字.md",
+    "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409011819.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409010922.png",
+    "Phase02/Chapter12_异常expection/0448.异常处理机制.md",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409002423.png",
+    "Phase02/Chapter12_异常expection/image",
+    "Phase02/Chapter11_枚举Enum和注解Annonation/0432.注解Annonation.md",
+    "Phase02/Chapter14_集合",
+    "Phase02/Chapter11_枚举Enum和注解Annonation/image",
+    "Phase01/Chapter02_Java概述/0026_java代码规范.md",
+    "Phase01/Chapter02_Java概述/0024_java注释.md",
+    "Phase01/Chapter08_面向对象编程(中级部分)/0319.object类详解.md",
+    "Content.md",
+    "韩顺平_循序渐进学Java零基础【完整笔记】.pdf",
     "Phase01/Chapter08_面向对象编程(中级部分)/0305.多态polymorphic.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230408005325.png",
+    "Phase02/Chapter19_IO数据流/未命名.md",
+    "Phase02/Chapter19_IO数据流",
+    "Phase02/Chapter11_枚举Enum和注解Annonation",
     "Phase01/Chapter08_面向对象编程(中级部分)/0285.继承inherit或extend.md",
     "Phase01/Chapter07_面向对象编程(基础部分)/0197.创建对象和访问对象的属性(成员变量).md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0301.类的方法的重写覆盖 overwrite.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407230810.png",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407230801.png",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407225152.png",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407224818.png",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407224643.png",
     "Phase01/Chapter08_面向对象编程(中级部分)/0280.封装Encapsulation.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口Interface",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.6抽象类.md",
     "Phase02/Chapter12_异常expection",
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.5 final 关键字.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.2理解main方法语法.md",
-    "Content.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/image",
     "Phase02",
-    "Phase01/Chapter08_面向对象编程(中级部分)/03xx.object类详解.md",
-    "Phase02/Chapter10_面向对象编程(高级部分)",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407214838.png",
     "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407214654.png",
     "Phase01/Chapter08_面向对象编程(中级部分)/0271.包.md",
     "Phase01/Chapter05_程序控制结构/0103.总览.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407210554.png",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image/Pasted image 20230407203337.png",
     "Phase01/Chapter08_面向对象编程(中级部分)/0278.访问修饰符Modifier.md",
     "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
     "Phase01/Chapter05_程序控制结构/Try-Catch and Throws.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0201.对象的方法(成员函数).md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0210.成员函数的传参机制.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0195.类的成员变量 (就是类的属性).md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0193.类和对象的概述.md",
-    "Phase01/Chapter03_变量/0039.数据类型.md",
-    "Phase01/Chapter03_变量/0045.javaAPI.md",
-    "Phase01/Chapter03_变量/0051.自动的进行数据类型转换.md",
-    "Phase01/Chapter03_变量/0054.强制去进行类型转换.md",
-    "Phase01/Chapter03_变量/image",
-    "Phase01/Chapter02_Java概述/image",
-    "Phase01/Chapter08_面向对象编程(中级部分)/image",
-    "韩顺平_循序渐进学Java零基础【完整笔记】.pdf"
+    "Phase01/Chapter07_面向对象编程(基础部分)/0201.对象的方法(成员函数).md"
   ]
 }
