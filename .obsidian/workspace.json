@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "6514269058e52300",
+        "id": "e35d03103bf99455",
         "type": "tabs",
         "children": [
           {
-            "id": "fee084af355df5d2",
+            "id": "934df29a061c045c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Phase02/Chapter11_枚举Enum和注解Annonation/0432.注解Annonation.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "a7cae71016e75a8c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Phase02/Chapter12_异常expection/0443.异常基本概念.md"
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md"
               }
             }
           }
@@ -159,23 +142,25 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a7cae71016e75a8c",
+  "active": "073b8b6f32c70b8e",
   "lastOpenFiles": [
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409013021.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012735.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012625.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012610.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012513.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012447.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012333.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409012233.png",
-    "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.5 final关键字.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.6抽象类.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0382.理解main方法语法.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409193552.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409192938.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409192835.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409175838.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.4 单例设计模式.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409174755.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409173221.png",
     "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409011819.png",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409010922.png",
     "Phase02/Chapter12_异常expection/0448.异常处理机制.md",
-    "Phase02/Chapter12_异常expection/image/Pasted image 20230409002423.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409144504.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409144425.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409143723.png",
+    "Phase02/Chapter12_异常expection/image/Pasted image 20230409143621.png",
     "Phase02/Chapter12_异常expection/image",
     "Phase02/Chapter11_枚举Enum和注解Annonation/0432.注解Annonation.md",
     "Phase02/Chapter14_集合",
@@ -195,9 +180,7 @@
     "Phase01/Chapter08_面向对象编程(中级部分)/0280.封装Encapsulation.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口Interface",
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.6抽象类.md",
     "Phase02/Chapter12_异常expection",
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.2理解main方法语法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/image",
     "Phase02",
     "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
@@ -205,7 +188,6 @@
     "Phase01/Chapter05_程序控制结构/0103.总览.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0278.访问修饰符Modifier.md",
     "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
-    "Phase01/Chapter05_程序控制结构/Try-Catch and Throws.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0201.对象的方法(成员函数).md"
+    "Phase01/Chapter05_程序控制结构/Try-Catch and Throws.md"
   ]
 }
