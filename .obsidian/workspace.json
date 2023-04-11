@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "e35d03103bf99455",
+        "id": "e0aa7330721c8375",
         "type": "tabs",
         "children": [
           {
-            "id": "934df29a061c045c",
+            "id": "d5b1db0aeba8bc1a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/10.4 单例设计模式.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "6d387632a40f48c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md"
+                "file": "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md"
               }
             }
           }
@@ -142,17 +159,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "073b8b6f32c70b8e",
+  "active": "6d387632a40f48c7",
   "lastOpenFiles": [
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.5 final关键字.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230410145414.png",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.4 单例设计模式.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0393.final关键字.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.6抽象类.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0382.理解main方法语法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409193552.png",
     "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409192938.png",
     "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409192835.png",
-    "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409175838.png",
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.4 单例设计模式.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409174755.png",
     "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230409173221.png",
     "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
@@ -178,7 +198,6 @@
     "Phase01/Chapter07_面向对象编程(基础部分)/0197.创建对象和访问对象的属性(成员变量).md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0301.类的方法的重写覆盖 overwrite.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0280.封装Encapsulation.md",
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口Interface",
     "Phase02/Chapter12_异常expection",
     "Phase02/Chapter10_面向对象编程(高级部分)/image",
@@ -187,7 +206,6 @@
     "Phase01/Chapter08_面向对象编程(中级部分)/0271.包.md",
     "Phase01/Chapter05_程序控制结构/0103.总览.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0278.访问修饰符Modifier.md",
-    "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md",
-    "Phase01/Chapter05_程序控制结构/Try-Catch and Throws.md"
+    "Phase01/Chapter02_Java概述/0010_JVM_JDK_JRE.md"
   ]
 }
