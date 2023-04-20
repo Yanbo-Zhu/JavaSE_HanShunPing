@@ -9,7 +9,7 @@
   "newFileLocation": "current",
   "attachmentFolderPath": "./image",
   "promptDelete": false,
-  "livePreview": false,
+  "livePreview": true,
   "newLinkFormat": "relative",
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": true
