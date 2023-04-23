@@ -82,3 +82,11 @@ Lambda 表达式
 接口默认方法
 
  宋红康 - 全网最全Java零基础入门教程：https://www.bilibili.com/video/BV1Kb411W75N （只看 Java 8， 9， 11  部分即可， ab 664 ）
+ 笔记: 
+ - https://blog.csdn.net/PorkBird/article/details/113666542
+	 - Lambda: https://blog.csdn.net/PorkBird/article/details/113727704
+ - https://juejin.cn/column/6961270133172109343
+	 - Lambda: https://juejin.cn/post/6962035387787116551
+ - 链接：https://pan.baidu.com/s/1GBuyWTHZ9My-qzLoJqS_9Q?pwd=kgrq   提取码：kgrq\
+ - 个人java基础部分系列笔记：https://blog.csdn.net/lyyrhf/category_10451086.html  
+	 - 个人java高级部分系列笔记：https://blog.csdn.net/lyyrhf/category_10703932.html
