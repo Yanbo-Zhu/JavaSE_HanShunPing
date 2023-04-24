@@ -8,43 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6133de5f0ba2cd13",
+            "id": "703f43f03fdd54ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Phase02/Chapter19_IO数据流/0618.节点流_文件字符流_Char_FileReader_FileWriter.md",
+                "file": "Phase02/Chapter19_IO数据流/0638.Properties类.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b72b7b2a72c0e416",
+            "id": "409f36627e2f0bfd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Phase02/Chapter19_IO数据流/0610.文件基本操作.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "74a418b2ec32862a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md",
+                "file": "Phase02/Chapter19_IO数据流/0632.标准输入输出流_InputStreamReader 和OutputStreamWriter.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "字符",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 405
   },
   "right": {
     "id": "450ba81a6e7d96bb",
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md",
+                "file": "Phase02/Chapter19_IO数据流/0632.标准输入输出流_InputStreamReader 和OutputStreamWriter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md",
+                "file": "Phase02/Chapter19_IO数据流/0632.标准输入输出流_InputStreamReader 和OutputStreamWriter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md"
+                "file": "Phase02/Chapter19_IO数据流/0632.标准输入输出流_InputStreamReader 和OutputStreamWriter.md"
               }
             }
           }
@@ -171,33 +159,40 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "74a418b2ec32862a",
+  "active": "409f36627e2f0bfd",
   "lastOpenFiles": [
+    "Phase02/Chapter19_IO数据流/0618.节点流_文件字符流_Char_FileReader_FileWriter.md",
+    "Phase02/Chapter19_IO数据流/0632.标准输入输出流_InputStreamReader 和OutputStreamWriter.md",
     "Phase02/Chapter19_IO数据流/0623.处理流_Buffer字符流_BuferedWritter_BufferReader.md",
     "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md",
+    "Phase02/Chapter19_IO数据流/0628.处理流_对象Object字节流_ObjectOutputStream__ObjectItputstream_.md",
+    "Phase02/Chapter19_IO数据流/0633.处理流_转换流_字节流转换成字符流_InputStreamReader和OutputStreamWriter.md",
+    "Phase02/Chapter19_IO数据流/0636.处理流_打印流_PrintStream 和PrintWriter.md",
+    "未命名.canvas",
+    "Phase02/Chapter19_IO数据流/0615.节点流_文件字节流Byte_FileInputStream_FileOutputStream.md",
     "Phase02/Chapter19_IO数据流/0610.文件基本操作.md",
-    "Phase02/Chapter19_IO数据流/未命名",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230422233650.png",
+    "Phase02/Chapter19_IO数据流/0641. 作业.md",
+    "Phase02/Chapter19_IO数据流/0638.Properties类.md",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423151009.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423145320.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423144823.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423144211.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423144013.png",
     "Phase02/Chapter19_IO数据流/0614.IO 流原理及流的分类.md",
-    "Phase02/Chapter19_IO数据流/0618.节点流_文件字符流_Char_FileReader_FileWriter.md",
-    "Phase02/Chapter19_IO数据流/0615.节点流_文件字符流Byte_FileInputStream_FileOutputStream.md",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230422215845.png",
+    "Phase02/Chapter19_IO数据流/未命名",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423140618.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423135747.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423135650.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423135643.png",
+    "Phase02/Chapter19_IO数据流/image/Pasted image 20230423135631.png",
     "Content.md",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230422212530.png",
     "韩顺平_循序渐进学Java零基础【完整笔记】.pdf",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.8接口.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0305.多态polymorphic.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0319.object类详解.md",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230420215442.png",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230420213618.png",
     "Phase02/Chapter11_枚举Enum和注解Annonation/0432.注解Annonation.md",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230420153024.png",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230420145526.png",
     "Phase02/Chapter12_异常expection/0448.异常处理机制.md",
     "Phase02/Chapter12_异常expection/0443.异常基本概念.md",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230419173308.png",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230419173032.png",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230419153830.png",
     "Phase02/Chapter19_IO数据流/image",
     "Phase02/Chapter15_范类/0565.JUnit.md",
     "Phase02/Chapter15_范类/image",
@@ -207,17 +202,10 @@
     "Phase02/Chapter10_面向对象编程(高级部分)/0393.final关键字.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.6抽象类.md",
-    "Phase02/Chapter10_面向对象编程(高级部分)/0382.理解main方法语法.md",
     "Phase02/Chapter12_异常expection/image",
     "Phase02/Chapter14_集合",
     "Phase02/Chapter11_枚举Enum和注解Annonation/image",
-    "Phase01/Chapter02_Java概述/0026_java代码规范.md",
-    "Phase01/Chapter02_Java概述/0024_java注释.md",
     "Phase02/Chapter19_IO数据流",
-    "Phase02/Chapter11_枚举Enum和注解Annonation",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0285.继承inherit或extend.md",
-    "Phase01/Chapter07_面向对象编程(基础部分)/0197.创建对象和访问对象的属性(成员变量).md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0301.类的方法的重写覆盖 overwrite.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0280.封装Encapsulation.md"
+    "Phase02/Chapter11_枚举Enum和注解Annonation"
   ]
 }
