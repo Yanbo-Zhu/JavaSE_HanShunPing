@@ -74,19 +74,63 @@ Password: cchc
 
 # 5 第四阶段
 
-java8 和 java11 特性
+java8 
+Java9&Java10&Java11新特性 
 
-Stream API
-Lambda 表达式
-新日期时间 API
-接口默认方法
+## 5.1 材料
 
- 宋红康 - 全网最全Java零基础入门教程：https://www.bilibili.com/video/BV1Kb411W75N （只看 Java 8， 9， 11  部分即可， ab 664 ）
+宋红康 - 全网最全Java零基础入门教程： https://www.bilibili.com/video/BV1Kb411W75N
+（只看 Java 8， 9， 11  部分即可， ab 664 ）
+
+day1 1-14 编程入门  
+day2 15-41 java语言概述  
+day3 42-69 基本语法  
+day4 70-93 基本语法  
+day5 94-116 基本语法  
+day6 117-141 基本语法与项目一  
+day7 142-163 eclipse使用与数组  
+day8 164-185 数组  
+day9 186-209 面向对象 上  
+day10 210-233 面向对象上  
+day11 234-258 面向对象上  
+day12 259-283 项目二 面向对象中  
+day13 284-305 面向对象中  
+day14 306-334 面向对象中  
+day15 335-363 面向对象下  
+day16 364-393 面向对象下  
+day17 394-415 异常处理  
+day18 416-437 项目三  
+day19 438-460 idea使用与多线程  
+day20 461-482 多线程  
+day21 483-508 常用类  
+day22 509-534 常用类  
+day23 535-557 枚举类与注解  
+day24 558-585 集合  
+day25 586-607 集合  
+day26 608-628 泛型与file  
+day27 629-655 io流  
+day28 656-682 io流与网络编程  
+day29 683-712 反射  
+day30 713-742 动态代理与java8新特性  
+day31 743-775 java9 10 11 新特性
+
+
  笔记: 
  - https://blog.csdn.net/PorkBird/article/details/113666542
 	 - Lambda: https://blog.csdn.net/PorkBird/article/details/113727704
  - https://juejin.cn/column/6961270133172109343
 	 - Lambda: https://juejin.cn/post/6962035387787116551
+ - https://blog.csdn.net/LW_20180806/article/details/127085457?spm=1001.2014.3001.5502
+ - https://oy6090.top/categories/Java/
  - 链接：https://pan.baidu.com/s/1GBuyWTHZ9My-qzLoJqS_9Q?pwd=kgrq   提取码：kgrq\
  - 个人java基础部分系列笔记：https://blog.csdn.net/lyyrhf/category_10451086.html  
 	 - 个人java高级部分系列笔记：https://blog.csdn.net/lyyrhf/category_10703932.html
+
+## 5.2 java8
+Stream API
+Lambda 表达式
+新日期时间 API
+接口默认方法
+
+## 5.3 java9 10 11
+
