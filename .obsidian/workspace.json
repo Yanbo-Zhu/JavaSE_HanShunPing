@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c500187b0f54d956",
+        "id": "704eb1018dffa501",
         "type": "tabs",
         "children": [
           {
-            "id": "d6bc35cb858d0008",
+            "id": "1ea0e0e89366d42d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Phase04/java8/671.方法的引用_构造器和数组的引用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Phase04/java8/671.方法的引用_构造器和数组的引用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Phase04/java8/671.方法的引用_构造器和数组的引用.md"
+              }
             }
           }
         ],
@@ -138,16 +142,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d6bc35cb858d0008",
+  "active": "073b8b6f32c70b8e",
   "lastOpenFiles": [
+    "Phase04/java8/671.函数式接口 FunctionaIInterface.md",
+    "Phase04/java8/671.方法的引用_构造器和数组的引用.md",
+    "Phase04/java8/image/Pasted image 20230429021505.png",
+    "Phase04/java8/image/Pasted image 20230428232710.png",
+    "Phase04/java8/image/Pasted image 20230428232143.png",
+    "Phase04/java8/666.Lambda表达式.md",
+    "Phase04/java8/664.总览.md",
+    "Content.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0397.抽象类.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0393.final关键字.md",
-    "Content.md",
-    "Phase04/java8/01.总览.md",
-    "Phase04/java8/02.Lambda表达式.md",
-    "Phase04/java8/03.函数式接口 FunctionaIInterface.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0402.接口.md",
-    "Phase04/java8/04.方法的引用_构造器和数组的引用.md",
     "Phase04/java8/image/Pasted image 20230426201728.png",
     "Phase04/java8/image",
     "Phase04/java8",
@@ -173,15 +180,11 @@
     "Phase02/Chapter19_IO数据流/0636.处理流_打印流_PrintStream 和PrintWriter.md",
     "Phase02/Chapter19_IO数据流/image/Pasted image 20230425150201.png",
     "Phase02/Chapter19_IO数据流/0614.IO 流原理及流的分类.md",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230425150045.png",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230425145923.png",
-    "Phase02/Chapter19_IO数据流/image/Pasted image 20230425145718.png",
     "Phase02/Chapter19_IO数据流/0615.节点流_文件字节流Byte_FileInputStream_FileOutputStream.md",
     "Phase02/Chapter19_IO数据流/0641. 作业.md",
     "Phase02/Chapter19_IO数据流/0638.Properties类.md",
     "Phase02/Chapter19_IO数据流/未命名",
     "Phase01/Chapter08_面向对象编程(中级部分)/0305.多态polymorphic.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0319.object类详解.md",
     "Phase02/Chapter19_IO数据流/image",
     "Phase02/Chapter15_范类/image",
     "Phase02/Chapter15_范类",
