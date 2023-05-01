@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "332bb0f94d12d90e",
+            "id": "86b28be6289362bf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md"
+              }
             }
           }
         ],
@@ -138,10 +146,28 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "332bb0f94d12d90e",
+  "active": "86b28be6289362bf",
   "lastOpenFiles": [
+    "Phase02/Chapter14_集合/0498.集合总览.md",
+    "Phase02/Chapter14_集合/0530.Map.md",
+    "Phase02/Chapter14_集合/0545.Collectopn工具类.md",
+    "Phase02/Chapter14_集合/0547.家庭作业.md",
+    "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+    "Phase02/Chapter14_集合/0542.集合选型规则.md",
+    "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430220713.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430215944.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430215346.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430214854.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430210144.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430205104.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430123921.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430123304.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430123022.png",
+    "Phase02/Chapter14_集合/image/Pasted image 20230430122205.png",
+    "Phase02/Chapter14_集合/0500.Collection.md",
+    "Phase02/Chapter14_集合/image",
     "Phase02/Chapter15_泛类/0565.JUnit.md",
-    "Phase02/Chapter15_泛类/image/Pasted image 20230429230832.png",
     "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0402.接口.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
@@ -150,22 +176,13 @@
     "Phase02/Chapter10_面向对象编程(高级部分)/0393.final关键字.md",
     "Phase04/java8/671.方法的引用_构造器和数组的引用.md",
     "Phase04/java8/671.函数式接口 FunctionaIInterface.md",
-    "Phase04/java8/image/Pasted image 20230429021505.png",
-    "Phase04/java8/image/Pasted image 20230428232710.png",
-    "Phase04/java8/image/Pasted image 20230428232143.png",
     "Phase04/java8/666.Lambda表达式.md",
     "Phase04/java8/664.总览.md",
     "Content.md",
-    "Phase04/java8/image/Pasted image 20230426201728.png",
     "Phase04/java8/image",
     "Phase04/java8",
-    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230426190121.png",
     "Phase02/Chapter10_面向对象编程(高级部分)/0393.const常量定义.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
-    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230426175138.png",
-    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230426175035.png",
-    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230426175012.png",
-    "Phase02/Chapter10_面向对象编程(高级部分)/image/Pasted image 20230426174839.png",
     "Phase04",
     "韩顺平_循序渐进学Java零基础【完整笔记】.pdf",
     "Phase02/Chapter10_面向对象编程(高级部分)/10.9内部类.md",
@@ -173,18 +190,10 @@
     "Phase02/Chapter19_IO数据流/0610.文件基本操作.md",
     "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md",
     "Phase02/Chapter19_IO数据流/0628.处理流_对象Object字节流_ObjectOutputStream__ObjectItputstream_.md",
-    "Phase02/Chapter19_IO数据流/0623.处理流_Buffer字符流_BuferedWritter_BufferReader.md",
-    "Phase02/Chapter19_IO数据流/0618.节点流_文件字符流_Char_FileReader_FileWriter.md",
-    "Phase02/Chapter19_IO数据流/0633.处理流_转换流_字节流转换成字符流_InputStreamReader和OutputStreamWriter.md",
-    "Phase02/Chapter19_IO数据流/0632.标准输入输出流_InputStream 和OutputStream.md",
-    "Phase02/Chapter19_IO数据流/0636.处理流_打印流_PrintStream 和PrintWriter.md",
-    "Phase02/Chapter19_IO数据流/0614.IO 流原理及流的分类.md",
-    "Phase02/Chapter19_IO数据流/0615.节点流_文件字节流Byte_FileInputStream_FileOutputStream.md",
     "Phase02/Chapter19_IO数据流/未命名",
     "Phase02/Chapter19_IO数据流/image",
     "Phase02/Chapter15_泛类/image",
     "Phase02/Chapter15_泛类",
-    "Phase02/Chapter12_异常expection/image",
-    "Phase02/Chapter14_集合"
+    "Phase02/Chapter12_异常expection/image"
   ]
 }
