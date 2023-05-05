@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "736a25e30594c16f",
+        "id": "5293163a9aed31d4",
         "type": "tabs",
         "children": [
           {
-            "id": "452de2d076ac5f3a",
+            "id": "d807983c431c4c60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+                "file": "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "2b928843d3b27b61",
+            "id": "e339df19c44863b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+                "file": "Phase02/Chapter14_集合/0500.Collection.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+                "file": "Phase02/Chapter14_集合/0500.Collection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+                "file": "Phase02/Chapter14_集合/0500.Collection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md"
+                "file": "Phase02/Chapter14_集合/0500.Collection.md"
               }
             }
           }
@@ -167,29 +167,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "2b928843d3b27b61",
+  "active": "e339df19c44863b1",
   "lastOpenFiles": [
-    "Phase02/Chapter14_集合/image/Pasted image 20230503003107.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502235532.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502224235.png",
-    "Phase02/Chapter14_集合/0530.Map_HashMap_HashTable_Properties_TreeMap.md",
-    "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502221610.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502220558.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502220220.png",
-    "Phase02/Chapter14_集合/0498.集合总览.md",
     "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
     "Phase02/Chapter14_集合/0500.Collection.md",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502170852.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502162231.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502160543.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502160408.png",
-    "Phase02/Chapter14_集合/image/Pasted image 20230502160003.png",
-    "Phase02/Chapter14_集合/0545.Collectoins工具类.md",
-    "Phase02/Chapter14_集合/0547.家庭作业.md",
-    "Phase02/Chapter14_集合/0542.集合选型规则.md",
-    "Phase02/Chapter14_集合/image",
     "Phase02/Chapter15_泛类/0565.JUnit.md",
+    "Phase02/Chapter14_集合/0542.集合选型规则.md",
+    "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+    "JavaFX/01_Grundlagen.md",
+    "JavaFX/image/Pasted image 20230504164720.png",
+    "JavaFX/image/Pasted image 20230504164411.png",
+    "JavaFX/image/Pasted image 20230504163940.png",
+    "JavaFX/content.md",
+    "JavaFX/image/Pasted image 20230504163005.png",
+    "JavaFX/image/Pasted image 20230504162531.png",
+    "JavaFX/image/Pasted image 20230504161613.png",
+    "JavaFX/image/Pasted image 20230504160910.png",
+    "JavaFX/image/Pasted image 20230504152512.png",
+    "JavaFX/image/Pasted image 20230504145708.png",
+    "JavaFX/image/Pasted image 20230504145512.png",
+    "JavaFX/image",
+    "JavaFX/Grundlagen/Grundlagen.md",
+    "JavaFX/Grundlagen",
+    "JavaFX",
+    "Phase02/Chapter14_集合/0530.Map_HashMap_HashTable_Properties_TreeMap.md",
+    "Phase02/Chapter14_集合/0498.集合总览.md",
+    "Phase02/Chapter14_集合/0547.家庭作业.md",
+    "Phase02/Chapter14_集合/0545.Collectoins工具类.md",
+    "Phase02/Chapter14_集合/image",
     "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0402.接口.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
@@ -207,14 +212,8 @@
     "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
     "Phase04",
     "韩顺平_循序渐进学Java零基础【完整笔记】.pdf",
-    "Phase02/Chapter10_面向对象编程(高级部分)/10.9内部类.md",
     "未命名.canvas",
-    "Phase02/Chapter19_IO数据流/0610.文件基本操作.md",
-    "Phase02/Chapter19_IO数据流/0626.处理流_Buffer字节流_BufferedInputStream_BufferedOutputStream.md",
     "Phase02/Chapter19_IO数据流/未命名",
-    "Phase02/Chapter19_IO数据流/image",
-    "Phase02/Chapter15_泛类/image",
-    "Phase02/Chapter15_泛类",
-    "Phase02/Chapter12_异常expection/image"
+    "Phase02/Chapter19_IO数据流/image"
   ]
 }
