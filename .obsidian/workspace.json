@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5293163a9aed31d4",
+        "id": "d2ccd1d2e4a0f457",
         "type": "tabs",
         "children": [
           {
-            "id": "d807983c431c4c60",
+            "id": "647f70979046bcef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "e339df19c44863b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Phase02/Chapter14_集合/0500.Collection.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405
+    "width": 315.5
   },
   "right": {
     "id": "450ba81a6e7d96bb",
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Phase02/Chapter14_集合/0500.Collection.md",
+                "file": "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Phase02/Chapter14_集合/0500.Collection.md",
+                "file": "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Phase02/Chapter14_集合/0500.Collection.md"
+                "file": "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md"
               }
             }
           }
@@ -155,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 312.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,53 +154,54 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e339df19c44863b1",
+  "active": "647f70979046bcef",
   "lastOpenFiles": [
-    "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
-    "Phase02/Chapter14_集合/0500.Collection.md",
-    "Phase02/Chapter15_泛类/0565.JUnit.md",
     "Phase02/Chapter14_集合/0542.集合选型规则.md",
-    "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
-    "JavaFX/01_Grundlagen.md",
-    "JavaFX/image/Pasted image 20230504164720.png",
-    "JavaFX/image/Pasted image 20230504164411.png",
-    "JavaFX/image/Pasted image 20230504163940.png",
-    "JavaFX/content.md",
-    "JavaFX/image/Pasted image 20230504163005.png",
-    "JavaFX/image/Pasted image 20230504162531.png",
-    "JavaFX/image/Pasted image 20230504161613.png",
-    "JavaFX/image/Pasted image 20230504160910.png",
-    "JavaFX/image/Pasted image 20230504152512.png",
-    "JavaFX/image/Pasted image 20230504145708.png",
-    "JavaFX/image/Pasted image 20230504145512.png",
-    "JavaFX/image",
-    "JavaFX/Grundlagen/Grundlagen.md",
-    "JavaFX/Grundlagen",
-    "JavaFX",
-    "Phase02/Chapter14_集合/0530.Map_HashMap_HashTable_Properties_TreeMap.md",
-    "Phase02/Chapter14_集合/0498.集合总览.md",
     "Phase02/Chapter14_集合/0547.家庭作业.md",
     "Phase02/Chapter14_集合/0545.Collectoins工具类.md",
-    "Phase02/Chapter14_集合/image",
+    "Phase02/Chapter14_集合/0530.Map_HashMap_HashTable_Properties_TreeMap.md",
+    "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
+    "Phase02/Chapter14_集合/0498.集合总览.md",
+    "Phase02/Chapter14_集合/0500.Collection.md",
+    "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
+    "Phase02/Chapter19_IO数据流/0610.文件基本操作.md",
+    "JavaFX/03_事件处理_Ereignisbehandlung/02_Controller.md",
+    "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理.md",
+    "JavaFX/01_Grundlagen/01_Grundlagen.md",
+    "JavaFX/04_其他/SceneBuilder.md",
+    "JavaFX/04_其他/image/Pasted image 20230506004823.png",
+    "JavaFX/04_其他/image/Pasted image 20230506004602.png",
+    "JavaFX/04_其他/image/Pasted image 20230506004549.png",
+    "JavaFX/04_其他/image/Pasted image 20230506004359.png",
+    "JavaFX/04_其他/image/Pasted image 20230506004300.png",
+    "JavaFX/04_其他/FXML布局文件.md",
+    "JavaFX/04_其他/未命名",
+    "JavaFX/04_其他/image/Pasted image 20230506003705.png",
+    "JavaFX/04_其他/image/Pasted image 20230506003646.png",
+    "JavaFX/04_其他/image/Pasted image 20230506003529.png",
+    "JavaFX/04_其他/image/Pasted image 20230506003507.png",
+    "JavaFX/04_其他/image/Pasted image 20230506003314.png",
+    "JavaFX/04_其他/image",
+    "JavaFX/04_其他",
+    "JavaFX/01_Grundlagen/02_Color_Font_Image.md",
+    "JavaFX/02_UI控件/UI控件.md",
+    "JavaFX/03_事件处理_Ereignisbehandlung/image",
+    "JavaFX/03_事件处理_Ereignisbehandlung",
+    "JavaFX/01_Grundlagen",
+    "JavaFX/02_UI控件/image",
+    "JavaFX/02_UI控件",
+    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
+    "JavaFX/00_Intellij上面使用IDEA/image",
+    "JavaFX/00_Intellij上面使用IDEA",
+    "Phase02/Chapter15_泛类/0565.JUnit.md",
+    "JavaFX/content.md",
+    "JavaFX/Grundlagen/Grundlagen.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0402.接口.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0285.继承inherit或extend.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0397.抽象类.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0393.final关键字.md",
-    "Phase04/java8/671.方法的引用_构造器和数组的引用.md",
-    "Phase04/java8/671.函数式接口 FunctionaIInterface.md",
-    "Phase04/java8/666.Lambda表达式.md",
-    "Phase04/java8/664.总览.md",
-    "Content.md",
-    "Phase04/java8/image",
-    "Phase04/java8",
-    "Phase02/Chapter10_面向对象编程(高级部分)/0393.const常量定义.md",
-    "Phase02/Chapter10_面向对象编程(高级部分)/0385.代码块.md",
-    "Phase04",
-    "韩顺平_循序渐进学Java零基础【完整笔记】.pdf",
-    "未命名.canvas",
-    "Phase02/Chapter19_IO数据流/未命名",
-    "Phase02/Chapter19_IO数据流/image"
+    "未命名.canvas"
   ]
 }
