@@ -11,11 +11,28 @@
             "id": "3ea926798245a0c1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a38693a369da0421",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,6 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +145,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md"
+              }
             }
           }
         ],
@@ -146,29 +167,30 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3ea926798245a0c1",
+  "active": "a38693a369da0421",
   "lastOpenFiles": [
+    "JavaFX/02_UI控件/UI控件.md",
+    "JavaFX/01_Grundlagen/02_Color_Font_Image.md",
+    "JavaFX/01_Grundlagen/01_Grundlagen.md",
+    "JavaFX/00_Intellij上面使用IDEA/Eclispe上使用 JavaFX.md",
+    "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512131453.png",
+    "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512130336.png",
+    "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512130000.png",
+    "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512125035.png",
+    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230512124457.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230512123819.png",
     "Phase02/Chapter14_集合/Iterator迭代器.md",
     "Phase02/Chapter14_集合/0498.集合总览.md",
     "Phase02/Chapter14_集合/0500.Collection.md",
     "JavaFX/04_其他/SceneBuilder.md",
     "JavaFX/04_其他/FXML布局文件.md",
-    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
     "JavaFX/03_事件处理_Ereignisbehandlung/02_Controller.md",
     "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理.md",
-    "JavaFX/01_Grundlagen/01_Grundlagen.md",
-    "JavaFX/01_Grundlagen/02_Color_Font_Image.md",
     "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507211737.png",
     "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507211650.png",
     "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507211629.png",
     "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507211615.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507211312.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507211158.png",
-    "JavaFX/04_其他/image/Pasted image 20230507205938.png",
-    "JavaFX/04_其他/image/Pasted image 20230507205733.png",
-    "JavaFX/02_UI控件/UI控件.md",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507172456.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230507172228.png",
     "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
     "Phase02/Chapter14_集合/0542.集合选型规则.md",
     "Phase02/Chapter14_集合/0547.家庭作业.md",
@@ -192,8 +214,6 @@
     "Phase02/Chapter10_面向对象编程(高级部分)/0374.类变量_静态变量 和 类方法_静态方法.md",
     "Phase02/Chapter10_面向对象编程(高级部分)/0402.接口.md",
     "Phase01/Chapter08_面向对象编程(中级部分)/0296.super.md",
-    "Phase01/Chapter08_面向对象编程(中级部分)/0285.继承inherit或extend.md",
-    "Phase02/Chapter10_面向对象编程(高级部分)/0397.抽象类.md",
     "未命名.canvas"
   ]
 }

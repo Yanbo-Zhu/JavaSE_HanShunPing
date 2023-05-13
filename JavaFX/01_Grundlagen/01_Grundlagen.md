@@ -1,4 +1,7 @@
 
+
+Diese Lerneinheit zeigt den Aufbau einer JavaFX-Anwendung, das Prinzip Layout und wichtige Layouts in JavaFX sowie das Paket javafx.scene.control. In der folgenden Lerneinheit werden weitere grafische Elemente behandelt, insbesondere Klassen des Pakets javafx.scene.shape. In der Lerneinheit FXE kommt Leben in die Anwendung durch die Ereignisbehandlung und das Binding.
+
 # 1 Geschichte von JavaFX 
   	
 
@@ -13,22 +16,33 @@ Eine Interoperabilität mit Swing ist vorgesehen, insbesondere wurde mit JavaFX 
 
 # 2 Einleitung 
 
+
 Grafische Benutzeroberflächen sind heute für Programmbenutzer selbstverständlich. Wir werden grafische Benutzeroberflächen mit Hilfe der JavaFX-Pakete programmieren. Dabei werden wir prinzipielle Konzepte kennenlernen, die andere Programmiersprachen und Bibliotheken auch benutzen wie Layout, grafische Bedienelemente (Buttons, Labels, usw.), sowie "Ereignisbehandlung und Binding." So werden Sie in der Lage sein, dieses Wissen in andere Umgebungen zu transferieren.
 Objektorientierung 	
 
+## 2.1 MVC Model-View-Controller
+
 JavaFX ist objektorientiert in dem Sinne, dass es eine klare Trennung von Aufgaben ermöglicht. Genauer gesagt: eine JavaFX-Anwendung kann nach dem Muster (pattern) "Model-View-Controller" gegliedert werden. Im Teil "Model" befindet sich die Darstellung der Daten, z. B. die Hotel-Klasse, wenn die Anwendung eine Liste von Hotels darstellt. Im Teil "View" befindet sich die statische grafische Darstellung der Anwendung. Im Teil "Controller" befindet sich die Steuerung der grafischen Elemente, z. B. was bewirkt das Klicken eines Buttons für die Daten? Diese drei Teile werden wir in drei Pakete gliedern. Darüber hinaus werden wir ein Paket für Ressourcen einführen, wenn die Anwendung weitere Dateien benötigt, wie z. B. Bilder.
 
-Model-View-Controller
-  	 
+![](image/Pasted%20image%2020230512123819.png)
+
+Model-View-Controller  	 
 ![](image/Pasted%20image%2020230504143355.png)
 
+
+## 2.2 Grafische Darstellung (.fxml file und SceneBuilder)
 Die JavaFX-Umgebung unterstützt Programmierer bei dieser Trennung. Die statische grafische Darstellung der Anwendung kann mit einem grafischen Editor, dem SceneBuilder, erstellt werden. Das Ergebnis wird in eine besondere XML-Datei mit dem Suffix .fxml gespeichert. Des Weiteren können die Bedienelemente aus dem Paket javafx.scene.control durch eine besondere .css-Datei "geskinnt" werden; Eigenschaften eines Buttons wie Farbe, Schrift usw. können in der .css-Datei festgelegt werden, getrennt vom Element Button selbst.
 
 In diesen drei Kapiteln werden wir aber die statische grafische Darstellung in einem eigenen Paket programmieren und nicht mit dem SceneBuilder zeichnen. Der Grund dafür ist didaktisch – Programmieren lernt man durch viel Übung. Durch die Programmierung der grafischen Darstellung werden Sie mehr Programmierpraxis gewinnen und den Aufbau der JavaFX-Bibliothek viel gründlicher kennenlernen.
 
-Diese Lerneinheit zeigt den Aufbau einer JavaFX-Anwendung, das Prinzip Layout und wichtige Layouts in JavaFX sowie das Paket javafx.scene.control. In der folgenden Lerneinheit werden weitere grafische Elemente behandelt, insbesondere Klassen des Pakets javafx.scene.shape. In der Lerneinheit FXE kommt Leben in die Anwendung durch die Ereignisbehandlung und das Binding.
 
-# 3 JavaFX 特性
+
+# 3 Interaktion durch bindings oder Ereignisbehandlung
+
+![](image/Pasted%20image%2020230512124457.png)
+
+
+# 4 JavaFX 特性
 
 -   **Java API**：JavaFX 使用 java 开发，能够调用丰富的 Java 接口，同时对使用 JVM 的编程语言支持友好，如 JRuby、Scala。
 -   **FXML**：JavaFX 中使用 fxml （基于 xml 的描述标记语言）来定义 UI 界面，使用 java 编码程序逻辑，实现展示和逻辑分离。
@@ -45,7 +59,7 @@ Diese Lerneinheit zeigt den Aufbau einer JavaFX-Anwendung, das Prinzip Layout un
 -   **高性能媒体引擎**：提供基于 GStreamer 的稳定、低延迟的媒体框架。
 -   **自包含应用部署模式**：JavaFX程序可包括所有需要的资源及 Java、JavaFX 运行时的私有副本，可作为本机可安装包分发，并提供与该操作系统本机应用程序相同的安装和启动体验。
 
-# 4 Aufbau JavaFX 程序基本结构
+# 5 Aufbau JavaFX 程序基本结构
 
 ![](image/Pasted%20image%2020230504152512.png)
 
@@ -54,7 +68,7 @@ JavaFX 程序结构内容包括舞台（Stage）、场景（Scene）、容器（
 ![](http://blog-images.qiniu.wqf31415.xyz/javafx_program_frame.jpg)
 
 
-## 4.1 Class `javafx.application.Application`
+## 5.1 Class `javafx.application.Application`
 
 JavaFX—Application: https://www.cnblogs.com/DirWang/articles/11263615.html
 
@@ -146,7 +160,7 @@ public class TsetStage extends Application{
 }
 ```
 
-## 4.2 Class javafx.stage.Stage
+## 5.2 Class javafx.stage.Stage
 
 Attribute: 
 - Title
@@ -174,7 +188,7 @@ event的例子:
 	- Platfor,.exit(): 退出程序加关闭窗口. 换成 primaryStage.close() 仅仅只是关闭窗口, 不退出程序
 	- ![](image/Pasted%20image%2020230505184441.png)
 
-## 4.3 Class javafx.scene.Scene
+## 5.3 Class javafx.scene.Scene
 
 Stage -> Scene -> 内涵多个组件 
 
@@ -201,7 +215,7 @@ Scene scene = new Scene (root,400,400);
 
 ![](image/Pasted%20image%2020230505190429.png)
 
-### 4.3.1 Class javafx.scene.Parent
+### 5.3.1 Class javafx.scene.Parent
 
 -   [java.lang.Object](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html)
     -   [javafx.scene.Node](https://openjfx.io/javadoc/11/javafx.graphics/javafx/scene/Node.html)
@@ -211,7 +225,7 @@ Scene scene = new Scene (root,400,400);
 
 Diese drei Unterklassen sind für prinzipiell unterschiedliche grafische Anwendungen vorgesehen. Kurz erklärt wird eine Group-Wurzel (root) für geometrische Anwendungen gewählt, eine Region-Wurzel für Formulare (GridPane ist eine Unterklasse von Region) und WebView für Anwendungen, welche Inhalte aus dem Web darstellen sollen. Diese drei Unterklassen haben ganz andere Anforderungen an die Grafik, wie z. B. was passiert, wenn das Hauptfenster vergrößert oder verkleinert wird. Die Scene-Klasse kapselt diese Anforderungen und Möglichkeiten für das Hauptfenster ein (Stage-Objekt), das vom Betriebssystem zur Verfügung gestellt wird.
 
-## 4.4 例子
+## 5.4 例子
 
 1 
 ```java
@@ -290,13 +304,13 @@ public class Main extends Application {
 
 ![](image/Pasted%20image%2020230504163005.png)
 
-# 5 Layout (Paket javafx.scene.layout)
+# 6 Layout (Paket javafx.scene.layout)
 
 
 Ein Layout bestimmt die Größe und die Positionen der grafischen Komponenten (auch Knoten (node) genannt) zueinander, die es enthält. In diesem Abschnitt sehen wir Klassen aus dem Paket javafx.scene.layout, die alle Unterklassen von  javafx.scene.layout.Region sind. Das heißt, sie eignen sich eher für Anwendungen wie Formulare. In diesem Kapitel beschränken wir uns auf: GridPane, VBox und Hbox, StackPane und BorderPane. 
 
 
-## 5.1 Layout GridPane
+## 6.1 Layout GridPane
 
 
 ![](image/Pasted%20image%2020230504144739.png)
@@ -382,7 +396,7 @@ public class HotelGrid extends Application {
 ```
 
 
-## 5.2 VBox und HBox
+## 6.2 VBox und HBox
 
 Die Klassen `javafx.scene.layout.VBox `und `javafx.scene.layout.HBox` erlauben eine flexible Gestaltung  der grafischen Komponenten, vor allem wenn sie kombiniert werden. In einem HBox-Objekt stehen die Elemente nebeneinander, während sie in einem VBox-Objekt übereinander stehen. Die Reihenfolge ist bestimmt durch die Reihenfolge, in der sie hinzugefügt wurden.
 
@@ -474,7 +488,7 @@ public class HotelVBoxHBox extends Application {
 ![](image/Pasted%20image%2020230504145000.png)
 
 
-## 5.3 Layout StackPane
+## 6.3 Layout StackPane
 
  	
 
@@ -536,7 +550,7 @@ public class HotelStack extends Application {
 
 
 
-## 5.4 Beipsiel: GrindPane 和 StackPane kombiniert 
+## 6.4 Beipsiel: GrindPane 和 StackPane kombiniert 
 
 Wie wir schon gesehen haben, ist durch Vererbung ein StackPane-Objekt auch ein Node-Objekt und kann somit als grafische Komponente zu einem anderen Layout-Objekt hinzugefügt werden, wie das Programm HotelGridStack zeigt.
  
@@ -565,7 +579,7 @@ HotelGridStack
 ![](image/Pasted%20image%2020230504145352.png)
 
 
-## 5.5 Layout BorderPane
+## 6.5 Layout BorderPane
 
 Das Layout BorderPane teilt die Fläche in fünf Bereiche: oben, unten, links, rechts und Mitte, wie die Abbildung  zeigt:
 
@@ -655,11 +669,11 @@ public class ExampleBorderPane extends Application {
 
 
 
-## 5.6 Ein Beispiel mit model-view und der Klasse Scrollpane
+## 6.6 Ein Beispiel mit model-view und der Klasse Scrollpane
 
 
 
-# 6 Zusammenfassung
+# 7 Zusammenfassung
 
 
 - Syntaktisch betrachtet ist eine JavaFX-Anwendung eine Unterklasse der Klasse` javafx.application.Application`. Die Methode start muss überschrieben werden.
