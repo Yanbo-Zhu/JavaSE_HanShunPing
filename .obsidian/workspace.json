@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "97c01f089821b8cb",
+        "id": "bae5e470a14c9820",
         "type": "tabs",
         "children": [
           {
-            "id": "3ea926798245a0c1",
+            "id": "4553590ab12b0067",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a38693a369da0421",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JavaFX/01_Grundlagen/01_Grundlagen.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -167,17 +146,17 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a38693a369da0421",
+  "active": "4553590ab12b0067",
   "lastOpenFiles": [
+    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
+    "JavaFX/01_Grundlagen/01_Grundlagen.md",
     "JavaFX/02_UI控件/UI控件.md",
     "JavaFX/01_Grundlagen/02_Color_Font_Image.md",
-    "JavaFX/01_Grundlagen/01_Grundlagen.md",
     "JavaFX/00_Intellij上面使用IDEA/Eclispe上使用 JavaFX.md",
     "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512131453.png",
     "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512130336.png",
     "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512130000.png",
     "JavaFX/00_Intellij上面使用IDEA/image/Pasted image 20230512125035.png",
-    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
     "JavaFX/01_Grundlagen/image/Pasted image 20230512124457.png",
     "JavaFX/01_Grundlagen/image/Pasted image 20230512123819.png",
     "Phase02/Chapter14_集合/Iterator迭代器.md",
