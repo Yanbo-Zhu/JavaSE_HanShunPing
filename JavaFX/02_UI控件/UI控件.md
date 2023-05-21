@@ -7,19 +7,7 @@ In diesem Abschnitt sehen wir Klassen für die Eingabe von Text: TextField, Text
 
 Das Paket bietet natürlich noch viel mehr; ein partieller Überblick wird am Ende dieses Abschnittes vorgestellt. Die Klassen für Bedienelemente sind direkte oder indirekte Unterklassen der abstrakten Klasse javafx.scene.control.Control.
 
-===========================================
 
-In diesem Abschnitt werden weitere wichtige Klassen kurz vorgestellt. Eine vollständige Anleitung über alle Klassen finden Sie in der Java-Dokumentation.
-
-http://docs.oracle.com/javafx
-
-Die Klassen MenuBar, Menu, MenuItem, CheckMenuItem und RadioMenuItem erlauben Menüs zu gestalten. In ein MenuBar-Objekt können mehrere Menu-Objekte hinzugefügt werden. Ein Menu-Objekt wiederum enthält MenuItem-Objekte. Ein CheckMenuItem-Objekt ist ein MenuItem-Objekt, das mit einem Zeichen markiert wird, wenn es ausgewählt ist. Ein RadioMenuItem-Objekt ist wie ein CheckMenuItem-Objekt, es kann zusätzlich geschaltet werden. Ein Beispiel wird in der Lerneinheit "2DG - 2D-Grafik" vorgestellt.
-
-Die generische Klasse `ComboBox<T>` erlaubt, eine Auswahlliste zu erstellen. Dabei wird häufig der Typ String für T benutzt.
-
-Mit der Klasse RadioButton können Items selektiert werden. Wenn mehrere RadioButton-Objekte erstellt werden, kann mit der Klasse ToggleGroup erreicht werden, dass nur ein einziges RadioButton-Objekt selektiert wird. Die Klasse CheckBox ist ähnlich wie RadioButton. Es können aber immer so viele CheckBox-Objekte selektiert werden wie gewünscht.
-
-Schließlich kann mit der Klasse DatePicker ein Datum eingegeben und mit der Klasse ColorPicker eine Farbe ausgewählt werden.
 
 # 2 Class Node
 
@@ -129,7 +117,36 @@ public class TextDemo extends Application {
 ```
 
 
-## 2.2 例子
+## 2.2 MenuBar, Menu, MenuItem, CheckMenuItem und RadioMenuItem
+In diesem Abschnitt werden weitere wichtige Klassen kurz vorgestellt. Eine vollständige Anleitung über alle Klassen finden Sie in der Java-Dokumentation.
+http://docs.oracle.com/javafx
+
+1 Klasse  *MenuBar, Menu, MenuItem, CheckMenuItem und RadioMenuItem*
+Die Klassen *MenuBar, Menu, MenuItem, CheckMenuItem und RadioMenuItem* erlauben Menüs zu gestalten. 
+- In ein MenuBar-Objekt können mehrere Menu-Objekte hinzugefügt werden. 
+- Ein Menu-Objekt wiederum enthält MenuItem-Objekte.
+- Ein CheckMenuItem-Objekt ist ein MenuItem-Objekt, das mit einem Zeichen markiert wird, wenn es ausgewählt ist.
+- Ein RadioMenuItem-Objekt ist wie ein CheckMenuItem-Objekt, es kann zusätzlich geschaltet werden. 
+
+Ein Beispiel wird in der Lerneinheit "2DG - 2D-Grafik" vorgestellt.
+
+## 2.3 `ComboBox<T>` , RadioButton, CheckBox
+
+2 Klasse `ComboBox<T>`
+Die generische Klasse `ComboBox<T>` erlaubt, eine Auswahlliste zu erstellen. Dabei wird häufig der Typ String für T benutzt.
+
+3  Klasse RadioButton
+Mit der Klasse RadioButton können Items selektiert werden. 
+enn mehrere RadioButton-Objekte erstellt werden, kann mit der Klasse ToggleGroup erreicht werden, dass nur ein einziges RadioButton-Objekt selektiert wird. 
+
+4 Klasse CheckBox
+Die Klasse CheckBox ist ähnlich wie RadioButton. Es können aber immer so viele CheckBox-Objekte selektiert werden wie gewünscht.
+
+## 2.4 DatePicker und Klasse ColorPicker
+5 Klasse DatePicker und Klasse ColorPicker
+Schließlich kann mit der Klasse DatePicker ein Datum eingegeben und mit der Klasse ColorPicker eine Farbe ausgewählt werden.
+
+## 2.5 例子
 
 ![](image/Pasted%20image%2020230505192425.png)
 
