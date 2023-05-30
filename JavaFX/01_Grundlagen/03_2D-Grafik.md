@@ -4,24 +4,135 @@
 ## 1.1 Koordinatensystem
 Wie in der Mathematik wird die **x - Achse** horizontal von links nach rechts aufsteigend festgelegt, dagegen verläuft die **y - Achse** senkrecht von oben nach unten. Alle Koordinaten sind **positive ganze Zahlen**.
 
+单位 为 pixel
+
 ![](image/Pasted%20image%2020230522185902.png)
 
+![](image/Pasted%20image%2020230529105547.png)
 
 
-## 1.2 Die Klassen javafx.scene.shape.Line und javafx.scene.shape.Shape
 
-## 1.3 Vater klasse" javafx.scene.shape.Shape
+# 2 javafx.scene.text.Text 
+
+weil die Klasse Text eine Unterklasse (subclass) von Shape ist und somit die Methode setFill erbt.
+
+Da die Klasse javafx.scene.text.Text eine Unterklasse von javafx.scene.shape.Shape ist, sind Farbeffekte mit Text-Objekten möglich.
+
+Im Konstruktor Text(double x, double y, String text) bestimmt der Parameter x die Spalte, ab der die Textausgabe erfolgt, während y die Grundlinie für die Textausgabe festlegt.
+
+Schauen Sie sich den Sachverhalt mit folgender Anweisung an.
+
+```
+Text text = new Text(5, 50, "Na, Super!");
+```
+
+  
+Nach dem Hinzufügen in ein Group-Objekt wird der Text wie in der Abbildung aussehen.
+
+![](image/Pasted%20image%2020230522192151.png)
+
+
+
+# 3 Farben mit JavaFX
+
+## 3.1 Model
+
+Neben dem **RGB-Standard** gibt es noch weitere Farbmodelle für die Sprache Java.
+
+Das **HSB-Modell** stellt eine Farbe durch die Parameter dar:
+
+-   Farbton
+-   Intensität
+-   Helligkeit
+
+Das **CMYK-Konzept** verwendet vier Farben:
+
+-   Cyan
+-   Magenta
+-   Yellow
+-   Black
+
+![](image/Pasted%20image%2020230522190626.png)
+
+
+## 3.2 Transparenz von Farben - Opacity
+
+```java
+Creates a new instance of color. 
+public Color(double red,
+             double green,
+             double blue,
+             double opacity)
+
+Parameters:
+-   red - red component ranging from 0 to 1
+-   green - green component ranging from 0 to 1
+-   blue - blue component ranging from 0 to 1
+-   opacity - opacity ranging from 0 to 1
+
+```
+
+```java
+public static Color rgb(int red,
+                        int green,
+                        int blue,
+                        double opacity)
+
+Creates an sRGB color with the specified RGB values in the range 0-255, and a given opacity.
+Parameters:
+
+    red - the red component, in the range 0-255
+    green - the green component, in the range 0-255
+    blue - the blue component, in the range 0-255
+    opacity - the opacity component, in the range 0.0-1.0
+```
+
+
+Die folgenden Methoden der Klasse Color erlauben den Rot-, Grün- und Blau- und Transparent-Anteil jeder Farbe zu ermitteln. 
+```java
+ 
+public final double getRed()
+//ermittelt Rot - Anteil im Bereich 0.0 <= r <= 1.0
+public final double getGreen()
+//ermittelt Grün - Anteil im Bereich 0.0 <= g <= 1.0
+public final double getBlue()
+//ermittelt Blau - Anteil im Bereich 0.0 <= b <= 1.0
+public final double getOpacity()
+//ermittelt Durchsichtigkeit - Anteil im Bereich 0.0 <= o <= 1.0
+
+```
+
+
+# 4 Superklasse javafx.scene.shape.Shape
 Die Klasse Shape ist abstrakt. Sie definiert wichtige Methoden für geometrische Formen, beispielsweise die Farbe und die Stärke des Rahmens oder die Farbe den Innenraums.
 
 ![](image/Pasted%20image%2020230522190251.png)
 
 In der Klasse Shape finden sich weitere hilfreiche Methoden, um beispielsweise den Durchschnitt (Methode intersect) oder die Vereinigung (Methode union) zweier Shape-Objekte zu bilden.  
 
-## 1.4 Unterklasse   javafx.scene.shape.Line
+# 5 Linie
+
+javafx.scene.shape.Line
 dass Line eine Unterklasse (subclass) von javafx.scene.shape.Shape ist.
 Line-Objekt: Der Konstruktor Line(double startX, double startY, double endX, double endY)
 
-## 1.5 例子 GeometrischeFiguren01
+
+```java
+Line line = new Line(startx, starty, endx, endy);
+Line line = new Line(0, 0, width, height);
+Line line = new Line(width, 0, 0, height);
+Line line = new Line(2, 3, 7, 3);
+Line line = new Line(2, 3, 7, 7);
+line.setStrokeWidth(5);
+line.setStroke(Color.GREEN);
+line.setStroke(Color.rgb(0, 150, 0, 0.5));
+```
+
+![](image/Pasted%20image%2020230529205305.png)
+
+
+
+## 5.1 例子 GeometrischeFiguren01
 
 
 
@@ -135,80 +246,27 @@ public class GeometrischeFiguren01 extends Application {
 ```
 
 
-# 2 Farben mit JavaFX
-
-## 2.1 Model
-
-Neben dem **RGB-Standard** gibt es noch weitere Farbmodelle für die Sprache Java.
-
-Das **HSB-Modell** stellt eine Farbe durch die Parameter dar:
-
--   Farbton
--   Intensität
--   Helligkeit
-
-Das **CMYK-Konzept** verwendet vier Farben:
-
--   Cyan
--   Magenta
--   Yellow
--   Black
-
-![](image/Pasted%20image%2020230522190626.png)
-
-
-## 2.2 Transparenz von Farben - Opacity
+# 6 Circle
 
 ```java
-Creates a new instance of color. 
-public Color(double red,
-             double green,
-             double blue,
-             double opacity)
-
-Parameters:
--   red - red component ranging from 0 to 1
--   green - green component ranging from 0 to 1
--   blue - blue component ranging from 0 to 1
--   opacity - opacity ranging from 0 to 1
-
+Circle circle = new Circle(centerx, centery, rad);
+Circle circle = new Circle(width/2, heigth/2, 10)
+circle.setFill(null);
+circle.setFill(Color.BLUE);
+circle.setStrokeWidth(staerke);
+circle.setStroke(Color.rgb(20, 25, 245));
+circle.setStrokeType(StrokeType.OUTSIDE);
+circle.setStrokeType(StrokeType.INSIDE);
+circle.getTransforms().add(new Translate(2, 3));
+circle.getTransforms().add(new Scale(0.5, 0.5));
+circle.getTransforms().add(new Scale(1.0, 0.5));
 ```
 
-```java
-public static Color rgb(int red,
-                        int green,
-                        int blue,
-                        double opacity)
-
-Creates an sRGB color with the specified RGB values in the range 0-255, and a given opacity.
-Parameters:
-
-    red - the red component, in the range 0-255
-    green - the green component, in the range 0-255
-    blue - the blue component, in the range 0-255
-    opacity - the opacity component, in the range 0.0-1.0
-```
+![](image/Pasted%20image%2020230529205340.png)
 
 
-Die folgenden Methoden der Klasse Color erlauben den Rot-, Grün- und Blau- und Transparent-Anteil jeder Farbe zu ermitteln. 
-```java
- 
-public final double getRed()
-//ermittelt Rot - Anteil im Bereich 0.0 <= r <= 1.0
-public final double getGreen()
-//ermittelt Grün - Anteil im Bereich 0.0 <= g <= 1.0
-public final double getBlue()
-//ermittelt Blau - Anteil im Bereich 0.0 <= b <= 1.0
-public final double getOpacity()
-//ermittelt Durchsichtigkeit - Anteil im Bereich 0.0 <= o <= 1.0
 
-```
-
-
-# 3 Die Klassen Rectangle, LinearGradient, RadialGradient und geometrische Transformationen
-
-
-## 3.1 Die Klasse Rectangle 
+# 7 Die Klasse Rectangle 
 
  	
 Die Klasse Rectangle erlaubt rechteckige Formen zu zeichnen. Der Konstruktor Rectangle(double x, double y, double width, double height) erzeugt ein Rectangle-Objekt mit der Länge (width) und Höhe (height), dessen obere linke Ecke die Koordinaten (x, y) hat.
@@ -216,8 +274,9 @@ Die Klasse Rectangle erlaubt rechteckige Formen zu zeichnen. Der Konstruktor Rec
 Die folgende Grafik zeigt ein Rechteck (rectangle) mit den Koordinaten (40 | 60), einer Breite von 200 Pixel und einer Höhe von 40 Pixel. Dieses kann mit der folgenden Anweisung erzeugt werden: new Rectangle(40, 60, 200, 40);
 
 
-### 3.1.1 Method 
+## 7.1 Method (setArcHeight/Width, setStroke, setStrokeWidth/Height, setFill  )
 1 Methoden setArcHeight und setArcWidth der Klasse Rectangle 
+边沿变得原话
 
 2  Methoden setStroke und setStrokeWidth
 Wie Line ist Rectangle eine Unterklasse (subclass) von Shape. Damit können die schon gesehenen Methoden setStroke und setStrokeWidth benutzt werden, um den Rand eines Rectangle-Objektes anzupassen
@@ -226,7 +285,48 @@ Wie Line ist Rectangle eine Unterklasse (subclass) von Shape. Damit können die 
 Die Methode setFill erlaubt, die Farbe des inneren Bereiches eines Shape-Objektes zu bestimmen. Diese drei Methoden werden mit der Variable rec1 benutzt.
 
 
-### 3.1.2 例子
+## 7.2 例子1 
+
+```java
+Rectangle rect = new Rectangle(
+startx, starty, width, height);
+Rectangle rect = new Rectangle(
+width/3, height/3, 250, 100);
+rect.setFill(new Color(1.0, 0.0, 0.0, 1.0));
+rect.setArcHeight(30);
+rect.setArcWidth(30);
+rect.setStrokeWidth(5);
+rect.setStroke(Color.rgb(30, 70, 125));
+rect.setStrokeType(StrokeType.OUTSIDE);
+rect.setStrokeType(StrokeType.INSIDE);
+rect.getTransforms().add(
+new Translate(2, 8));
+rect.getTransforms().add(
+new Scale(0.5, 0.5));
+rect.getTransforms().add(
+new Rotate(45, 2, 8));
+```
+
+![](image/Pasted%20image%2020230529205919.png)
+
+
+```java
+Rectangle rect = new Rectangle(
+startx, starty, width, height);
+Rectangle rect = new Rectangle(
+width/3, height/3, 250, 100);
+rect.setFill(new Color(1.0, 0.0, 0.0, 1.0));
+Text txt = new Text(
+rect.getX(), rect.getY(), "(" +
+rect.getX() + "/" + rect.getY() + ")");
+txt.setFont(new Font("Arial", 30));
+Group root = new Group();
+root.getChildren().addAll(rect, txt);
+```
+
+![](image/Pasted%20image%2020230529205943.png)
+
+## 7.3 例子 2
 
 ![](image/Pasted%20image%2020230522191238.png)
 
@@ -387,13 +487,16 @@ public class GeometrischeFiguren02 extends Application {
 
 
 
-## 3.2 javafx.scene.paint.LinearGradient/RadialGradient
+# 8 Die Klassen LinearGradient, RadialGradient
+
+javafx.scene.paint.LinearGradient/RadialGradient
+
 Es wird nicht mit einer einzigen Farbe gefüllt, sondern mit Farben, die progressiv ineinander übergehen - einem Verlauf (gradient). JavaFX stellt dafür zwei Klassen zur Verfügung: javafx.scene.paint.LinearGradient; und javafx.scene.paint.RadialGradient.
 
 Mit der Klasse LinearGradient erfolgt der progressive Wechsel einer Farbe entlang einer Linie, 
 mit der Klasse RadialGradient entlang eines Kreises. 
 
-### 3.2.1 LinearGradient
+### 8.1.1 LinearGradient
 
 Der Konstruktor der Klasse LinearGradient sieht so aus:
 
@@ -437,13 +540,13 @@ Was passiert mit der Änderung: 0, 0, 1, 0 statt 0, 0, 0, 1?
 
 Die Linie geht jetzt von der oberen Ecke links zur oberen Ecke rechts. In diesem Fall wird die grüne Farbe links anfangen und die rote Farbe rechts, siehe gradient2().
 
-## 3.3 geometrische Transformationen
+# 9 geometrische Transformationen
 
 Mit Hilfe der Methoden setRotate, setTranslateX, setTranslateY der Klasse Node ist es möglich, das Node-Elemente samt ihrer Kinder zu drehen und zu versetzen.   
 Das Paket javafx.scene.shape hat noch andere fertige geometrische Figuren wie die Klassen Circle, Ellipse, Sphere usw.
 
 
-# 4 javafx.scene.shape.Polygon 多边形 
+# 10 javafx.scene.shape.Polygon 多边形 
 
 
 Die Klassen Polyline und Polygone (geschlossene Polyline-Objekte) erlauben es, eigene geometrische Figuren zu erstellen. 
@@ -451,7 +554,7 @@ Polygone sind Vielecke oder Streckenzüge.  Der/Die ProgrammiererIn übergibt a
 Die Anweisung new Polygon(40, 40, 40, 80, 80, 80); erzeugt ein rechtwinkliges Dreieck.
 
 
-## 4.1 例子
+## 10.1 例子
 ![](image/Pasted%20image%2020230522192208.png)
 
 ```java
@@ -548,27 +651,9 @@ public class GeometrischeFiguren03 extends Application {
 ```
 
 
-# 5 javafx.scene.text.Text 
-
-weil die Klasse Text eine Unterklasse (subclass) von Shape ist und somit die Methode setFill erbt.
-
-Da die Klasse javafx.scene.text.Text eine Unterklasse von javafx.scene.shape.Shape ist, sind Farbeffekte mit Text-Objekten möglich.
-
-Im Konstruktor Text(double x, double y, String text) bestimmt der Parameter x die Spalte, ab der die Textausgabe erfolgt, während y die Grundlinie für die Textausgabe festlegt.
-
-Schauen Sie sich den Sachverhalt mit folgender Anweisung an.
-
-```
-Text text = new Text(5, 50, "Na, Super!");
-```
-
-  
-Nach dem Hinzufügen in ein Group-Objekt wird der Text wie in der Abbildung aussehen.
-
-![](image/Pasted%20image%2020230522192151.png)
 
 
-# 6 Geometrische Figuren mit den Klassen Polyline und Polygone
+## 10.2 Geometrische Figuren mit den Klassen Polyline und Polygone
 
 Das Programm GeometrischeFiguren04 zeigt eine Benutzung der Methode makeStar in einer anderen Anwendung.
 
@@ -691,7 +776,7 @@ public class OurShapes {
 
 
 
-# 7 Model View: Beispiel 
+# 11 Model View: Beispiel 
 
 
 Im Studienmodul Grundlagen der Programmierung I  haben Sie die Klassen Rectangle, Circle usw. als Unterklassen (subclass) der Klasse Shape programmiert. Diese Klassen – um ein paar Getters ergänzt – beschreiben die mathematischen Eigenschaften der Figuren, wie Ursprung, Länge, Fläche usw. und bilden jetzt unser Modell – diese Shape-Objekte werden nun grafisch dargestellt.
@@ -720,6 +805,8 @@ Die Klasse ShowShapesA zeigt eine graphische Darstellung der Objekte, welche mit
 
 Die Klasse ShowShapesA zeigt eine graphische Darstellung der Objekte, welche mit der Methode getDefaultShapes erzeugt wurden. Ein MRectangle-Objekt aus dem Paket model wird mit einem Rectangle-Objekt aus dem Paket javafx.scene.shape gezeichnet. Ähnliches gilt für ein MCircle-Objekt.
 
+
+ShowShapesA.java
 ```java
 package view;
 
@@ -1105,7 +1192,7 @@ public class MCircle extends MShape {
 ```
 
 
-# 8 Model View Beispiel:  Lösung mit Reflection 
+# 12 Model View Beispiel:  Lösung mit Reflection 
 Lösung mit Reflection (optional)
 使用 泛类
 
@@ -1113,9 +1200,9 @@ Lösung mit Reflection (optional)
 上一个 解法 中的潜在问题:
 
 Ein Problem der Klasse ShowShapesA ist, dass sie verändert werden muss, wenn das Modell um eine neue geometrische Form ergänzt wird. 
-Dies ist im Allgemeinen nicht die Art der Erweiterbarkeit, die man sich wünscht. Praktischer und robuster ist es, dass lediglich das Paket (package) view um eine weitere Klasse erweitert werden sollte und dass in den schon existierenden Klassen keine Änderungen notwendig sind; so gibt es keine Gefahr von zusätzlichen Fehlern als sekundärer Effekt der Änderungen in existierenden Klassen. 
+Dies ist im Allgemeinen nicht die Art der Erweiterbarkeit, die man sich wünscht. 
+Praktischer und robuster ist es, dass lediglich das Paket (package) view um eine weitere Klasse erweitert werden sollte und dass in den schon existierenden Klassen keine Änderungen notwendig sind; so gibt es keine Gefahr von zusätzlichen Fehlern als sekundärer Effekt der Änderungen in existierenden Klassen. 
 Diese Idee wird mit Hilfe von Reflection umgesetzt. 
-
 
 ---
 
@@ -1123,43 +1210,42 @@ Diese Idee wird mit Hilfe von Reflection umgesetzt.
 Die generische Klasse` Class<T>` kann jede Klasse reflektieren, welche in Java geschrieben wird. 
 Sei zum Beispiel s ein Objekt, das mit der Klasse MRectangle instanziiert wurde. 
 
-Die Anweisung` Class<?>` c1 = s.getClass(); weist der Variablen c1 das einzige Objekt vom Typ `Class<MRectangle> `zu, welches die Klasse MRectangle reflektiert. Die Methode getClass ist in der Klasse Object definiert. 
+- Die Anweisung` Class<?> c1 = s.getClass();` weist der Variablen c1 das einzige Objekt vom Typ `Class<MRectangle> `zu, welches die Klasse MRectangle reflektiert. 
+- Die Methode `getClass` ist in der Klasse Object definiert. 
+- `String modelname = s.getClass().getName();`
+	- Diese obige Anweisung weist der Variablen modelname den Namen der Klasse zu, womit s instanziiert wurde. 
+- Sei viewname eine Variable, welche den vollen Namen (mit Paketen) einer Klasse enthält. 
+	- `Class<?> c = Class.forName(viewname);`   
+	- Diese obige Anweisung erzeugt das Objekt c, welches die Klasse mit dem Namen wie in viewname angegeben reflektiert.
 
-String modelname = s.getClass().getName();   :  Diese obige Anweisung weist der Variablen modelname den Namen der Klasse zu, womit s instanziiert wurde.
-Sei viewname eine Variable, welche den vollen Namen (mit Paketen) einer Klasse enthält. 
-
-`Class<?> c = Class.forName(viewname);`   : Diese obige Anweisung erzeugt das Objekt c, welches die Klasse mit dem Namen wie in viewname angegeben reflektiert.
-
+总结
 Wir haben gerade zwei Möglichkeiten gesehen, um das Objekt zu erzeugen, welches eine Klasse reflektiert. 
 Die erste Möglichkeit wird benutzt, wenn ein Objekt zur Verfügung steht – wie oben das Objekt s.  
 Die zweite Möglichkeit wird benutzt, wenn der volle Name der Klasse bekannt ist, wie zuletzt in der Variable viewname. 
 Diese zwei Möglichkeiten werden wir in diesem Abschnitt verwenden.
 
+---
+上面解决方法 的 实践
 
 Die erste Möglichkeit wird in der Main-Klasse benutzt, welche immer existiert, wenn mit Eclipse ein neues JavaFX-Projekt erzeugt wird.
-```
-scene.getStylesheets().add(getClass().getResource("application.css")
-             .toExternalForm())
+```java
+scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm())
 ```
 In dieser langen Anweisung ermittelt der Aufruf getclass() das Objekt, welche die Main-Klasse reflektiert. Der Aufruf der Methode getResource("application.css") übermittelt dann die URL dieser Ressource.
 
-_Reflection_ ist ein mächtiges Werkzeug. Mit Hilfe dieses Class-Objektes können insbesondere Methoden der Klasse ermittelt und sogar aufgerufen werden. Dies alles passiert dynamisch, je nachdem, welche Klasse vom Objekt c reflektiert wird.
+什么是 Reflection:
+==_Reflection_ ist ein mächtiges Werkzeug. Mit Hilfe dieses Class-Objektes können insbesondere Methoden der Klasse ermittelt und sogar aufgerufen werden. Dies alles passiert dynamisch, je nachdem, welche Klasse vom Objekt c reflektiert wird.
 
-In dieser Lösung wird eine view-Klasse für jede Klasse im model entwickelt, welche grafisch dargestellt werden soll, aktuell die Klassen VRectangle und VCircle. Die Konvention der Namen ist an der Stelle wichtig. Eine view-Klasse heisst genauso wie eine Klasse im Paket model; der Unterschied ist lediglich der erste Buchstabe. Wichtig ist auch die Konvention für den Aufbau einer solchen V-Klasse:  sie enthält eine einzige Klassenmethode namens getShape mit einem einzigen Parameter vom Typ MShape.
+In dieser Lösung wird eine view-Klasse für jede Klasse im model entwickelt, welche grafisch dargestellt werden soll, aktuell die Klassen VRectangle und VCircle. 
+Die Konvention der Namen ist an der Stelle wichtig. Eine view-Klasse heisst genauso wie eine Klasse im Paket model; der Unterschied ist lediglich der erste Buchstabe. 
+Wichtig ist auch die Konvention für den Aufbau einer solchen V-Klasse:  sie enthält eine einzige Klassenmethode namens getShape mit einem einzigen Parameter vom Typ MShape.
 
-Im Wesentlichen wird in dieser Methode programmiert, was in der Anweisung
+Im Wesentlichen wird in dieser Methode programmiert, was in der Anweisung `if (s instanceof MRectangle)` in der Klasse  ShowShapesA programmiert ist.
 
-```
-if (s instanceof MRectangle)
-```
-
-  
-in der Klasse  ShowShapesA programmiert ist.
+---
 
 
-
-==Klasse VRectangle aus VRectangle.java
-
+Klasse VRectangle aus VRectangle.java
 ```java
 package view;
 
@@ -1263,7 +1349,6 @@ und auch das Objekt wird ermittelt, welches diese View-Klasse reflektiert - im 
 Class<?> c = Class.forName(viewname);
 ```
 
-  
 Die Konvention des Aufbaus einer view-Klasse wird benutzt, um die einzige Methode dieser Klasse zu ermitteln - im Quellcode mit der folgenden Anweisung programmiert: 
 ```
 Method m = c.getMethod(METHODNAME, Class.forName(PARAMTYPE));
@@ -1304,7 +1389,6 @@ public class ShowShapesB extends Application {
     private static final String PARAMTYPE = "model.MShape";
     
     
-    
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -1315,13 +1399,15 @@ public class ShowShapesB extends Application {
             for (MShape s : shapes) {
                     //the name of the class the object s is an instance of
                     String modelname = s.getClass().getName();
+                    
                     // the class that should be taken to build the view for s
-                    String viewname = PREFIXVIEW+modelname.substring(PREFIXMODEL.length());
+                    String viewname = PREFIXVIEW + modelname.substring(PREFIXMODEL.length()); // extract the substring from position x to the end of orgianl String. Endindex of substring starts from 1 and not from 0.
                     Class<?> c = Class.forName(viewname);
+                    
                     //the Method-Object has to be created in order to invoke the method
-                    //the getMethod needs the name of the method and the Class-Object
-                    // of each parameter
+                    //the getMethod needs the name of the method and the Class-Object of each parameter
                     Method m = c.getMethod(METHODNAME, Class.forName(PARAMTYPE));
+                    
                     // Method getShape is called;
                     // the fist parameter is null, because getShape is static;
                     // the method invoke returns an object of type Object,
@@ -1329,8 +1415,7 @@ public class ShowShapesB extends Application {
                     Shape s1 = (Shape) m.invoke(null, s);
 
                     // the area (number rounded) displayed as text
-                    Text text = new Text(s.getXOrigin(), s.getYOrigin(),
-                            "a: "+Double.toString(Math.round(s.area())));
+                    Text text = new Text(s.getXOrigin(), s.getYOrigin(), "a: "+ Double.toString(Math.round(s.area())));
                     
                     root.getChildren().addAll(s1, text);
             }
