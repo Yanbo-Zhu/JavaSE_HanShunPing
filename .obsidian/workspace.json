@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bae5e470a14c9820",
+        "id": "00672418c19b70ed",
         "type": "tabs",
         "children": [
           {
-            "id": "89ffcfe879b559ad",
+            "id": "4b081c113f1bdda4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理_Ereignisbehandlung.md",
+                "file": "JavaFX/01_Grundlagen/04_Model_View_Contoller.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "labelrating",
+                "query": "Serializable",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412.5
+    "width": 487.5
   },
   "right": {
     "id": "450ba81a6e7d96bb",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理_Ereignisbehandlung.md",
+                "file": "JavaFX/01_Grundlagen/04_Model_View_Contoller.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理_Ereignisbehandlung.md",
+                "file": "JavaFX/01_Grundlagen/04_Model_View_Contoller.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理_Ereignisbehandlung.md"
+                "file": "JavaFX/01_Grundlagen/04_Model_View_Contoller.md"
               }
             }
           }
@@ -154,43 +154,47 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "89ffcfe879b559ad",
+  "active": "4b081c113f1bdda4",
   "lastOpenFiles": [
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232724.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232609.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232442.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232430.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/03_PropertiesInJavaFX.md",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232235.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232225.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529232106.png",
-    "JavaFX/03_事件处理_Ereignisbehandlung/01_事件处理_Ereignisbehandlung.md",
-    "JavaFX/03_事件处理_Ereignisbehandlung/02_Controller.md",
-    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230529224531.png",
+    "JavaFX/03_事件处理_Ereignisbehandlung/01_Grundlagen der Ereignisbehandlung_und_Binding.md",
     "JavaFX/01_Grundlagen/03_2D-Grafik.md",
-    "JavaFX/01_Grundlagen/image/Pasted image 20230529205943.png",
-    "JavaFX/01_Grundlagen/image/Pasted image 20230529205919.png",
-    "JavaFX/01_Grundlagen/image/Pasted image 20230529205340.png",
-    "JavaFX/01_Grundlagen/00_例子.md",
-    "JavaFX/01_Grundlagen/02_Color_Font_Image.md",
-    "JavaFX/01_Grundlagen/01_Grundlagen.md",
-    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
-    "JavaFX/02_UI控件/UI控件.md",
-    "JavaFX/00_Intellij上面使用IDEA/Eclispe上使用 JavaFX.md",
-    "Java解析XML/资源.md",
-    "Java解析XML",
-    "Phase02/Chapter14_集合/Iterator迭代器.md",
-    "Phase02/Chapter14_集合/0498.集合总览.md",
-    "Phase02/Chapter14_集合/0500.Collection.md",
-    "JavaFX/04_其他/SceneBuilder.md",
-    "JavaFX/04_其他/FXML布局文件.md",
+    "JavaFX/01_Grundlagen/01_Grundlagen_Layout.md",
     "Phase02/Chapter14_集合/0504.List_ArrayList_Vector_LinkedList.md",
-    "Phase02/Chapter14_集合/0542.集合选型规则.md",
-    "Phase02/Chapter14_集合/0547.家庭作业.md",
-    "Phase02/Chapter14_集合/0545.Collectoins工具类.md",
+    "Phase02/Chapter19_IO数据流/0623.处理流_Buffer流.md",
+    "XML/01_XML_Grundlagen.md",
+    "XML/02_XML_Dokumente_erstellen.md",
+    "XML/资源.md",
+    "JavaFX/03_事件处理_Ereignisbehandlung/02_Controller.md",
+    "JavaFX/02_UI控件/UI控件_Bedienelemente.md",
+    "JavaFX/03_事件处理_Ereignisbehandlung/03_Binding_Properties.md",
+    "JavaFX/00_Intellij上面使用IDEA/Intellij上使用javaFX.md",
+    "Phase04/java8/666.Lambda表达式.md",
+    "Phase04/java8/671.函数式接口_FunctionaI_Interface.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0397.抽象类.md",
+    "Phase02/Chapter10_面向对象编程(高级部分)/0402.接口.md",
+    "Phase02/Chapter19_IO数据流/02_0628.处理流_对象Object字节流_ObjectOutputStream_ObjectItputstream.md",
+    "Phase02/Chapter19_IO数据流/03_Zeichenströme_Superclass_Reader_Writer.md",
+    "Phase02/Chapter19_IO数据流/0610.File Class.md",
+    "Phase02/Chapter19_IO数据流/0614.IO 流原理及流的分类.md",
+    "Phase02/Chapter19_IO数据流/0633.处理流_转换流_字节流转换成字符流_InputStreamReader和OutputStreamWriter.md",
+    "JavaFX/01_Grundlagen/02_Color_Font_Image_Text.md",
+    "JavaFX/01_Grundlagen/04_Model_View_Contoller.md",
+    "JavaFX/03_事件处理_Ereignisbehandlung/image/Pasted image 20230702125442.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702111050.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702111017.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110920.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110835.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110820.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110806.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110801.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110714.png",
+    "JavaFX/01_Grundlagen/image/Pasted image 20230702110711.png",
+    "JavaFX/01_Grundlagen/00_例子.md",
     "Phase02/Chapter14_集合/0530.Map_HashMap_HashTable_Properties_TreeMap.md",
     "Phase02/Chapter14_集合/0517.Set_HashSet_LinkedHashSet_TreeSet.md",
-    "Phase02/Chapter19_IO数据流/0610.文件基本操作.md",
+    "XML/image",
+    "XML",
+    "XML/Java解析XML",
     "JavaFX/04_其他/未命名",
     "JavaFX/04_其他/image",
     "JavaFX/04_其他",
@@ -198,10 +202,6 @@
     "JavaFX/03_事件处理_Ereignisbehandlung",
     "JavaFX/01_Grundlagen",
     "JavaFX/02_UI控件/image",
-    "JavaFX/02_UI控件",
-    "JavaFX/00_Intellij上面使用IDEA/image",
-    "Phase02/Chapter15_泛类/0565.JUnit.md",
-    "JavaFX/content.md",
     "未命名.canvas"
   ]
 }

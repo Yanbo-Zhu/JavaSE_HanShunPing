@@ -43,6 +43,11 @@ Die JavaFX-Umgebung unterstützt Programmierer bei dieser Trennung. Die statisch
 In diesen drei Kapiteln werden wir aber die statische grafische Darstellung in einem eigenen Paket programmieren und nicht mit dem SceneBuilder zeichnen. Der Grund dafür ist didaktisch – Programmieren lernt man durch viel Übung. Durch die Programmierung der grafischen Darstellung werden Sie mehr Programmierpraxis gewinnen und den Aufbau der JavaFX-Bibliothek viel gründlicher kennenlernen.
 
 
+## 2.3 主要的 Packet
+
+
+- javafx.scene.control
+- javafx.scene.shape: grafische Elemente
 
 # 3 Interaktion durch bindings oder Ereignisbehandlung
 
@@ -75,11 +80,44 @@ JavaFX 程序结构内容包括舞台（Stage）、场景（Scene）、容器（
 ![](http://blog-images.qiniu.wqf31415.xyz/javafx_program_frame.jpg)
 
 
-## 5.1 Class `javafx.application.Application`
+## 5.1 总览 
+
+- Syntaktisch betrachtet ist eine JavaFX-Anwendung eine Unterklasse der Klasse javafx.application.Application. Die Methode start muss überschrieben werden.
+- Das Vokabular von FX ist dem Theater entliehen. Die Methode start hat einen Parameter vom Typ javafx.stage.Stage, der das Hauptfenster darstellt. Mit Hilfe der Methode setScene muss ein javafx.scene.Scene dem Stage-Objekt assoziiert werden.
+
+
+Apllication > PrimaryStage > Scene > root (GridPane) > Bedienelement
+
+```java
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        try {
+            GridPane root = new GridPane();
+            Scene scene = new Scene(root,400,400);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+```
+
+
+## 5.2 Class `javafx.application.Application`
 
 JavaFX—Application: https://www.cnblogs.com/DirWang/articles/11263615.html
 
-Eine JavaFX-Anwendung ist eine Unterklasse (subclass) von `javafx.application.Application` und muss die Methode start überschreiben. Das Vokabular ist dem Theater entliehen. Ein Theaterstück wird auf einer Bühne gespielt. Entsprechend ist der Parameter der Methode start vom Typ Stage, und entspricht dem Hauptfenster, das die grafische Oberfläche zeigt. Ein Theaterstück hat mindestens eine Szene. 
+Eine JavaFX-Anwendung ist eine Unterklasse (subclass) von `javafx.application.Application` und muss die Methode start überschreiben. 
+Das Vokabular ist dem Theater entliehen. Ein Theaterstück wird auf einer Bühne gespielt. 
+Entsprechend ist der Parameter der Methode start vom Typ Stage, und entspricht dem Hauptfenster, das die grafische Oberfläche zeigt. Ein Theaterstück hat mindestens eine Szene. 
+
 ![](image/Pasted%20image%2020230504144221.png)
 
 1.Application是JavaFX程序的入口，任何javafx应用程序程序都要继承该类并重写start()方法
@@ -167,7 +205,7 @@ public class TsetStage extends Application{
 }
 ```
 
-## 5.2 Class javafx.stage.Stage
+## 5.3 Class javafx.stage.Stage
 
 Attribute: 
 - Title
@@ -195,7 +233,7 @@ event的例子:
 	- Platfor,.exit(): 退出程序加关闭窗口. 换成 primaryStage.close() 仅仅只是关闭窗口, 不退出程序
 	- ![](image/Pasted%20image%2020230505184441.png)
 
-## 5.3 Class javafx.scene.Scene
+## 5.4 Class javafx.scene.Scene
 
 Stage -> Scene -> 内涵多个组件 
 
@@ -222,7 +260,7 @@ Scene scene = new Scene (root,400,400);
 
 ![](image/Pasted%20image%2020230505190429.png)
 
-### 5.3.1 Class javafx.scene.Parent
+### 5.4.1 Class javafx.scene.Parent
 
 -   [java.lang.Object](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html)
     -   [javafx.scene.Node](https://openjfx.io/javadoc/11/javafx.graphics/javafx/scene/Node.html)
@@ -232,7 +270,7 @@ Scene scene = new Scene (root,400,400);
 
 Diese drei Unterklassen sind für prinzipiell unterschiedliche grafische Anwendungen vorgesehen. Kurz erklärt wird eine Group-Wurzel (root) für geometrische Anwendungen gewählt, eine Region-Wurzel für Formulare (GridPane ist eine Unterklasse von Region) und WebView für Anwendungen, welche Inhalte aus dem Web darstellen sollen. Diese drei Unterklassen haben ganz andere Anforderungen an die Grafik, wie z. B. was passiert, wenn das Hauptfenster vergrößert oder verkleinert wird. Die Scene-Klasse kapselt diese Anforderungen und Möglichkeiten für das Hauptfenster ein (Stage-Objekt), das vom Betriebssystem zur Verfügung gestellt wird.
 
-## 5.4 例子
+## 5.5 最简单的例子
 
 1 
 ```java
@@ -260,8 +298,6 @@ public class Main extends Application {
 2
 Was ist die nächste kleinste mögliche JavaFX-Anwendung? Eine Bühne mit einer Szene ohne Schauspieler, aber mit Inszenierung - siehe Programm Main unten. Oder mit anderen Worten, ein Hauptfenster mit einem Objekt vom Typ Scene; ein Konstruktor der Klasse Scene hat mindestens einen Parameter vom Typ javax.scene.Parent. Die Klasse Parent ist abstrakt; die direkten Unterklassen (Group, Region, Webview) sind für die Inszenierung (Anordnung der grafischen Komponenten) verantwortlich. Die Klasse GridPane - die hier benutzt wird - ist eine indirekte Unterklasse (subclass) von Region.
 ```java
- 	
-
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -279,8 +315,6 @@ public class Main extends Application {
         launch(args);
     }
 }
-
-
 ```
 
 3
@@ -311,7 +345,32 @@ public class Main extends Application {
 
 ![](image/Pasted%20image%2020230504163005.png)
 
-# 6 Layout (Paket javafx.scene.layout)
+
+
+# 6 javafx.stage.Modality 两个Pane 之间的关系
+
+Die zwei Fenster koexistieren. Eines kann unabhängig vom anderen geschlossen werden. Das zweite Fenster kann modal deklariert werden: nur wenn es geschlossen wird, können Benutzer mit dem ersten Fenster weiter interagieren. Dies wird wie folgt programmiert:
+```java
+//a second stage
+Stage secondStage = new Stage();
+secondStage.setTitle("Dialog");
+
+GridPane root2 = new GridPane();
+root2.add(new Label("Welcome to the new hotel ibis!"), 0, 0);
+
+secondStage.setScene(new Scene(root2, 300, 300));
+secondStage.initOwner(primaryStage);
+secondStage.initModality(Modality.WINDOW_MODAL);
+
+secondStage.show();
+
+```
+
+
+
+# 7 Layout (Paket javafx.scene.layout)
+
+Paket javafx.scene.layout, die alle Unterklassen von  javafx.scene.layout.Region sind.
 
 Ein Layout bestimmt die Größe und die Positionen der grafischen Komponenten (auch Knoten (node) genannt) zueinander, die es enthält. In diesem Abschnitt sehen wir Klassen aus dem Paket javafx.scene.layout, die alle Unterklassen von  javafx.scene.layout.Region sind. Das heißt, sie eignen sich eher für Anwendungen wie Formulare. In diesem Kapitel beschränken wir uns auf: 
 
@@ -320,128 +379,19 @@ GridPane, VBox und Hbox, StackPane und BorderPane.
 Das Java-Tutorial ([Working With Layouts in JavaFX](http://docs.oracle.com/javafx/2/layout/builtin_layouts.htm#CHDGHCDG)) zeigt zusätzlich drei weitere Layouts: FlowPane, TilePane und AnchorPane.
 
 
-## 6.1 Layout BorderPane
-
-Das Layout BorderPane teilt die Fläche in fünf Bereiche: oben, unten, links, rechts und Mitte, wie die Abbildung  zeigt:
-
-![](image/Pasted%20image%2020230504145437.png)
+## 7.1 Layout javafx.scene.layout.GridPane
 
 
-
-```java
-BorderPane root = new BorderPane();
-Scene scene = new Scene (root, 400, 300);
-Stage primaryStage = new Stage();
-primaryStage.setScene(scene); primaryStage.show();
-```
-
-## 6.2 例子
-例子: Das Programm ExampleBorderPane kombiniert die Klassen BorderPane und HBox, um vier Label-Objekte Namens top, left, right und bottom an den Seiten des Fensters zu platzieren und drei Button-Objekte - button1, button2 und button3 - in der Mitte.
-
-```java
-package application;
-
-import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
-
-/**
- * This class illustrates BorderPane combined with HBox.
- * @author agathe merceron
- *
- */
-public class ExampleBorderPane extends Application {
-    
-    @Override
-    public void start(Stage primaryStage) {
-        try {
-            BorderPane root = new BorderPane();
-    
-            Label top = new Label("label top");
-            top.setPadding(new Insets(25, 25, 25, 25));
-            root.setTop(top);
-            
-            Label left = new Label("label left");
-            left.setPadding(new Insets(25, 25, 25, 25));
-            root.setLeft(left);
-            //put this label in the center of the left side
-            BorderPane.setAlignment(left, Pos.CENTER);
-            
-            Label right = new Label("label right");
-            right.setPadding(new Insets(25, 25, 25, 25));
-            root.setRight(right);
-            
-            Label bottom = new Label("label bottom");
-            bottom.setPadding(new Insets(25, 25, 25, 25));
-            root.setBottom(bottom);
-            //put this label in the center above the bottom line
-            BorderPane.setAlignment(bottom, Pos.CENTER);
-            
-            HBox center = new HBox();
-            //inside second all components will be placed in the middle
-            //and on the bottom
-            center.setAlignment(Pos.BASELINE_CENTER);
-            Button button1 = new Button("button1");
-            //puts some space around the text of the button
-            button1.setPadding(new Insets(25, 25, 25, 25));
-            Button button2 = new Button("button1");
-            //puts some space around the text of the button
-            button2.setPadding(new Insets(25, 25, 25, 25));
-            Button button3 = new Button("button1");
-            //puts some space around the text of the button
-            button3.setPadding(new Insets(25, 25, 25, 25));
-            
-            center.getChildren().addAll(button1, button2, button3);
-            root.setCenter(center);
-            
-            Scene scene = new Scene(root,400,400);
-            primaryStage.setTitle("Example with BorderPane");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-        
-    public static void main(String[] args) {
-        launch(args);
-    }
-}
-```
-
-![](image/Pasted%20image%2020230504145512.png)
-
-
-## 6.3 例子2
-
-![](image/Pasted%20image%2020230520130515.png)
-
-```java
-BorderPane root = new BoderPane();
-Text txt = new Text(„Überschrift“);
-root.setTop(txt);
-Label label = new Label(„Unterschrift“);
-root.setBottom(label); root.setAlignment(label, Pos.CENTER);
-TextField field = new TextField();
-Image image = new Image (getClass().getResource("/resource/rechteck.jpg").toString());
-ImageView imageview =
-new ImageView(image);
-HBox hbox = new HBox(imageview ,
-field);
-root.setCenter(hbox);
-```
-
-## 6.4 Layout GridPane
-
+### 7.1.1 一些 method
 ```java
 root.add(button, 2, 3); //  Die Anweisung fügt die Komponente namens button in die 2. Spalte und 3. Zeile ein.
 root.add(text, 0, 0, 2, 1); //Die Anweisung fügt die Komponente namens text in die 0. Spalte und 0. Zeile ein; die Komponente erstreckt sich über 2 Spalten und 1 Zeile.
+```
+
+![](image/Pasted%20image%2020230519230612.png)
+
+```java
+
 GridPane.setHgrow(labelrating, Priority.ALWAYS); //Die Anweisung bewirkt, dass die Komponente namens labelrating immer mehr Platz waagerecht nimmt; dabei skaliert die Beschriftung des Label-Objektes aber nicht.
 
 GridPane.setHalignment(currentrating, Hpos.RIGHT); // Außerdem kann die Position innerhalb der Zelle des Gitters z. B. links oder rechts verändert werden. 
@@ -450,23 +400,35 @@ GridPane.setValignment(currentrating, Vpos.BASELINE); //  Die Anweisung bewirkt,
 
 root.setGridLinesVisible(true); //  Da es nicht immer leicht ist zu verstehen, wie sich die Komponenten bezüglich Zeilen und Spalten verhalten, kann man Zeilen und Spalten (beim Debugging) mit der Anweisung  sichtbar machen. 
 
+```
 
-idPane root = new GridPane();
+![](image/Pasted%20image%2020230504144739.png)
+
+
+
+```java
+
+GridPane root = new GridPane();
 Scene scene = new Scene (root, 400, 300);
 Stage primaryStage = new Stage();
 primaryStage.setScene(scene); primaryStage.show();
 
 setHgab(5)
 setVgab(5)
-
 ```
-
-![](image/Pasted%20image%2020230519230612.png)
-
-![](image/Pasted%20image%2020230504144739.png)
 
 ![](image/Pasted%20image%2020230520130405.png)
 
+
+```java
+    //gives a limit to column 0
+    root.getColumnConstraints().add(new ColumnConstraints(100));
+    //gives a limit to column 1
+    root.getColumnConstraints().add(new ColumnConstraints(140));
+```
+
+
+### 7.1.2 例子 
 
 ```java
 package application;
@@ -548,15 +510,15 @@ public class HotelGrid extends Application {
 }
 ```
 
+## 7.2 VBox und HBox
 
-## 6.5 VBox und HBox
-
-Die Klassen `javafx.scene.layout.VBox `und `javafx.scene.layout.HBox` erlauben eine flexible Gestaltung  der grafischen Komponenten, vor allem wenn sie kombiniert werden. In einem HBox-Objekt stehen die Elemente nebeneinander, während sie in einem VBox-Objekt übereinander stehen. Die Reihenfolge ist bestimmt durch die Reihenfolge, in der sie hinzugefügt wurden.
-
+Die Klassen `javafx.scene.layout.VBox `und `javafx.scene.layout.HBox` erlauben eine flexible Gestaltung  der grafischen Komponenten, vor allem wenn sie kombiniert werden. 
+==In einem HBox-Objekt stehen die Elemente nebeneinander, während sie in einem VBox-Objekt übereinander stehen. ==
+Die Reihenfolge ist bestimmt durch die Reihenfolge, in der sie hinzugefügt wurden.
 
 Das Beispiel HotelVBoxHBox zeigt eine ähnliche grafische Oberfläche wie das Programm HotelGrid, diesmal realisiert mit einer VBox für die senkrechte Anordnung der Elemente, kombiniert mit der Klasse Hbox für die waagerechte Anordnung der zwei Label-Objekte und des Bildes. 
 
-Beachten Sie dabei, wie die Elemente hinzugefügt werden: root.getChildren().add(text); die Methode getChildren liefert einer Liste aller Elemente, welche root als Eltern-Knoten haben. Die Methode add fügt das Element text am Ende dieser Liste hinzu. 
+Beachten Sie dabei, wie die Elemente hinzugefügt werden:` root.getChildren().add(text)`; die Methode getChildren liefert einer Liste aller Elemente, welche root als Eltern-Knoten haben. Die Methode add fügt das Element text am Ende dieser Liste hinzu. 
 
 
 ```java
@@ -641,11 +603,13 @@ public class HotelVBoxHBox extends Application {
 ![](image/Pasted%20image%2020230504145000.png)
 
 
-## 6.6 Layout StackPane
+## 7.3 Layout javafx.scene.layout.StackPane
 
 在两个圈里面 出现 
 
-Mit der Klasse StackPane werden die grafischen Komponenten übereinander gestapelt, in der Reihenfolge, wie sie hinzugefügt werden. Das Programm HotelStack lässt das Bild des Hotels über zwei Kreisen erscheinen. Ähnlich wie mit VBox und HBox werden Elemente in die Liste der Kinder-Knoten vom StackPane-Objekt hinzugefügt. Mit der Methode addAll können mehrere Elemente in der Reihenfolge, wie sie erscheinen, zugleich in diese Liste hinzugefügt werden. 
+==Mit der Klasse StackPane werden die grafischen Komponenten übereinander gestapelt, in der Reihenfolge, wie sie hinzugefügt werden. ==
+
+Das Programm HotelStack lässt das Bild des Hotels über zwei Kreisen erscheinen. Ähnlich wie mit VBox und HBox werden Elemente in die Liste der Kinder-Knoten vom StackPane-Objekt hinzugefügt. Mit der Methode addAll können mehrere Elemente in der Reihenfolge, wie sie erscheinen, zugleich in diese Liste hinzugefügt werden. 
 
 ![](image/Pasted%20image%2020230504145137.png)
 
@@ -702,8 +666,142 @@ public class HotelStack extends Application {
 ```
 
 
+## 7.4 Layout javafx.scene.layout.BorderPane
 
-## 6.7 Beipsiel: GrindPane 和 StackPane kombiniert 
+Das Layout BorderPane teilt die Fläche in fünf Bereiche: oben, unten, links, rechts und Mitte, wie die Abbildung  zeigt:
+
+![](image/Pasted%20image%2020230504145437.png)
+
+
+
+```java
+BorderPane root = new BorderPane();
+Scene scene = new Scene (root, 400, 300);
+Stage primaryStage = new Stage();
+primaryStage.setScene(scene); primaryStage.show();
+
+
+Label left = new Label("label left");
+left.setPadding(new Insets(25, 25, 25, 25));
+root.setLeft(left);
+//put this label in the center of the left side
+BorderPane.setAlignment(left, Pos.CENTER);
+
+root.setLeft(left);
+root.setRight(left);
+root.setButtom(left);
+root.setTop(left);
+
+```
+
+
+### 7.4.1 例子1
+例子: Das Programm ExampleBorderPane kombiniert die Klassen BorderPane und HBox, um vier Label-Objekte Namens top, left, right und bottom an den Seiten des Fensters zu platzieren und drei Button-Objekte - button1, button2 und button3 - in der Mitte.
+
+
+
+```java
+package application;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+/**
+ * This class illustrates BorderPane combined with HBox.
+ * @author agathe merceron
+ *
+ */
+public class ExampleBorderPane extends Application {
+    
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            BorderPane root = new BorderPane();
+    
+            Label top = new Label("label top");
+            top.setPadding(new Insets(25, 25, 25, 25));
+            root.setTop(top);
+            
+            Label left = new Label("label left");
+            left.setPadding(new Insets(25, 25, 25, 25));
+            root.setLeft(left);
+            //put this label in the center of the left side
+            BorderPane.setAlignment(left, Pos.CENTER);
+            
+            Label right = new Label("label right");
+            right.setPadding(new Insets(25, 25, 25, 25));
+            root.setRight(right);
+            
+            Label bottom = new Label("label bottom");
+            bottom.setPadding(new Insets(25, 25, 25, 25));
+            root.setBottom(bottom);
+            //put this label in the center above the bottom line
+            BorderPane.setAlignment(bottom, Pos.CENTER);
+            
+            HBox center = new HBox();
+            //inside second all components will be placed in the middle
+            //and on the bottom
+            center.setAlignment(Pos.BASELINE_CENTER);
+            Button button1 = new Button("button1");
+            //puts some space around the text of the button
+            button1.setPadding(new Insets(25, 25, 25, 25));
+            Button button2 = new Button("button1");
+            //puts some space around the text of the button
+            button2.setPadding(new Insets(25, 25, 25, 25));
+            Button button3 = new Button("button1");
+            //puts some space around the text of the button
+            button3.setPadding(new Insets(25, 25, 25, 25));
+            
+            center.getChildren().addAll(button1, button2, button3);
+            root.setCenter(center);
+            
+            Scene scene = new Scene(root,400,400);
+            primaryStage.setTitle("Example with BorderPane");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+        
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+```
+
+![](image/Pasted%20image%2020230504145512.png)
+
+
+### 7.4.2 例子2
+
+![](image/Pasted%20image%2020230520130515.png)
+
+```java
+BorderPane root = new BoderPane();
+Text txt = new Text(„Überschrift“);
+root.setTop(txt);
+Label label = new Label(„Unterschrift“);
+root.setBottom(label); 
+root.setAlignment(label, Pos.CENTER);
+TextField field = new TextField();
+Image image = new Image (getClass().getResource("/resource/rechteck.jpg").toString());
+ImageView imageview =
+new ImageView(image);
+HBox hbox = new HBox(imageview ,
+field);
+root.setCenter(hbox);
+```
+
+
+## 7.5 Beipsiel: GrindPane 和 StackPane kombiniert 
 
 Wie wir schon gesehen haben, ist durch Vererbung ein StackPane-Objekt auch ein Node-Objekt und kann somit als grafische Komponente zu einem anderen Layout-Objekt hinzugefügt werden, wie das Programm HotelGridStack zeigt.
  
@@ -733,9 +831,40 @@ HotelGridStack
 ![](image/Pasted%20image%2020230504145352.png)
 
 
-# 7 Pane 中的属性
+## 7.6 ScrollPane
 
-1  BorderPane spacing between nodes
+ScrollPane root = new ScrollPane();
+root.setContent(box);
+
+```java
+public void start(Stage primaryStage) {
+	try {
+
+		ScrollPane root = new ScrollPane();
+		VBox box = new VBox();
+		box.setSpacing(20);
+		
+		ArrayList<Hotel> hotels = AllHotels.getDefaultList();
+		for (Hotel h : hotels ) {
+			GridPane hotelPane = showHotel(h);
+			box.getChildren().add(hotelPane);
+		}
+		
+		root.setContent(box);
+		Scene scene = new Scene(root,400,400);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}
+```
+
+![](image/Pasted%20image%2020230702005828.png)
+
+## 7.7 Pane 中的属性
+
+### 7.7.1 BorderPane spacing between nodes (setTop, setCenter, setButtom)
 https://stackoverflow.com/questions/32077140/borderpane-spacing-between-nodes
 
 ```java
@@ -753,10 +882,9 @@ BorderPane.setMargin(centerNode, insets);
 Node bottomNode = new Label("BOTTOM");
 bp.setBottom(bottomNode);
 BorderPane.setMargin(bottomNode, insets);
-
 ```
 
-2 background color
+### 7.7.2 setBackground()
 https://www.tabnine.com/code/java/methods/javafx.scene.layout.BorderPane/setBackground
 ```java
 //MenuBar changes the background color of the scene (Java FX 8)
@@ -769,6 +897,7 @@ p2.setBackground(new Background(new BackgroundFill(Color.RED, null, null)));
 p2.setLayoutX(150);
 p2.setLayoutY(150);
 ```
+
 
 
 
