@@ -1,6 +1,19 @@
 
 # 1 Concurrency 
 
+Concurrency is the parallel or pseudo-parallel execution of instructions.
+
+
+## 1.1 Parallelization
+
+Code without cross-dependencies can be executed in parallel –once it has been parallelized, we can also distribute the code to multiple machines.
+
+=> Parallelization is possible at different “levels“:
+Run code on several machines (=> Distributed Systems)
+Run code in several processes within one machine
+Run code in several threads within one process
+
+=> How can we execute several threads or processes on just one CPU?
 
 
 # 2 Processes and threads
