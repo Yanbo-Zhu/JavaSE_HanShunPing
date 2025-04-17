@@ -367,7 +367,8 @@ main: He's done!
 
 - Whenever we need to execute several instructions atomically, i.e., no other thread may access the respective variables in between, we have to coordinate which thread may work on which resources.
 - For this purpose, Java offers several mechanisms based on locking.
-- 
+
+Um Konfilct zu vermeiden,  die durch  mehere Thread geleichzeitig an andenn selber object oder daten bearbeiten 
 
 ## 3.1 Locking in Java
 
@@ -496,7 +497,13 @@ Typically, notifyAll() is the preferred alternative.
 ==notify() 被执行后 会自动 找 同一个 object 下 那个一个 thread in state waiting, 然后 interupt 这个 thread 唤醒他 ==
 
 
-## 4.2 例子  producer-consumer problem
+## 4.2 notify()
+
+- This call **selects ONE of the waiting threads** to be awakened.
+- **Which one?** → It’s **chosen arbitrarily** (depends on JVM/thread scheduler — not under your control).
+
+
+## 4.3 例子  producer-consumer problem
 
 
 Sometimes, synchronizing critical sections alone does not suffice. We also may need to distinguish different types of threads.

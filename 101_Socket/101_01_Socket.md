@@ -22,24 +22,27 @@ When we are done, we have to close the socket again via s.close(). This automati
 When we want to implement a server, we need instances of class ServerSocket which get a port as parameter in their constructor:
 ServerSocketserver = new ServerSocket(8082);
 
-Afterwards, we invoke server.accept(); which blocks until a client has connected and then returns an instance of Socket. We can then use this object to communicate with the client via the streams again.
+Afterwards, we invoke server.accept(); ==which blocks until a client has connected and then returns an instance of Socket==. We can then use this object to communicate with the client via the streams again.
+
+build a verbindung aus client mit ServerSocket (Server )
 
 ![[Pasted image 20250416205737.png]]
 
 EchoServer
 ```java
 //exception handling omitted
-ServerSocket server = newServerSocket(8082);
-Socket client = server.accept();
+ServerSocket server = new ServerSocket(8082);   // ① Start server on port 8082
+Socket client = server.accept();                // ② Wait for a client to connect (blocking call)
 
 int i;
-
-while((i = client.getInputStream().read()) != -1) {
-	client.getOutputStream().write(i);
+while((i = client.getInputStream().read()) != -1) {   // ③ Read byte-by-byte from the client
+    client.getOutputStream().write(i);                // ④ Echo the same byte back to the client
 }
 
-server.close();
+server.close();  // ⑤ Close the server after the client disconnects
 ```
+
+The server reads bytes one at a time from the client and immediately writes them back → effectively echoing whatever the client sends.
 
 
 EchoClient
