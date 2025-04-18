@@ -53,3 +53,18 @@ s.getOutputStream().write(123);
 System.out.println(s.getInputStream().read());
 s.close();
 ```
+
+
+`client.getInputStream()`
+- 返回一个 **输入流（InputStream）**，可以从中读取客户端发送过来的数据。
+- 在这段代码中：  `while((i = client.getInputStream().read()) != -1)`
+- 表示从客户端逐字节（byte-by-byte）读取数据，直到读取到 `-1`，表示对方关闭了连接。
+
+ `client.getOutputStream()`
+- 返回一个 **输出流（OutputStream）**，可以通过它将数据发回客户端。
+- `client.getOutputStream().write(i);`
+- 是把刚才接收到的字节 **原封不动地回送给客户端**，实现了一个最简单的“回声服务器”（Echo Server）。
+
+你可以把 `InputStream` 看作是「听筒」，用来“听”客户端说了什么；  
+`OutputStream` 就是「话筒」，你可以通过它“说话”回应客户端。
+
