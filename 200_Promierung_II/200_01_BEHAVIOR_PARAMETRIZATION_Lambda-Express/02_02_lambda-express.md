@@ -1,6 +1,8 @@
 
 
 
+
+
 ![](image/Pasted%20image%2020250502211329.png)
 
 
@@ -191,39 +193,20 @@ public class FunctionChainingExample {
 ## 2.4 预定义的函数式接口库 in java.util.function
 
 
-|Functional Interface|Function Descriptor|Primitive Specializations|
-|---|---|---|
-|`**Predicate<T>**`|`**T->boolean**`|`**IntPredicate**`, `**LongPredicate**`, `**DoublePredicate**`|
-|`**Consumer<T>**`|`**T->void**`|`**IntConsumer**`, `**LongConsumer**`, `**DoubleConsumer**`|
-|`**Function<T, R>**`|`**T->R**`|`**IntFunction<R>**`, `**DoubleFunction<R>**`, `**LongFunction<R>**`, `**ToIntFunction<T>**`, `**ToDoubleFunction<T>**`, `**ToLongFunction<T>**`, `**IntToDoubleFunction**`, `**IntToLongFunction**`,  <br>`**DoubleToIntFunction**`, `**DoubleToLongFunction**`, `**LongToDoubleFunction**`, `**LongToIntFunction**`|
-|`**Supplier<T>**`|`**()->T**`|`**BooleanSupplier**`, `**IntSupplier**`, `**LongSupplier**`, `**DoubleSupplier**`|
-|`**UnaryOperator<T>**`|`**T->T**`|`**IntUnaryOperator**`, `**LongUnaryOperator**`, `**DoubleUnaryOperator**`|
-|`**BinaryOperator<T>**`|`**(T,T)->T**`|`**IntBinaryOperator**`, `**LongBinaryOperator**`, `**DoubleBinaryOperator**`|
-|`**BiPredicate<L,R>**`|`**(L,R)->boolean**`||
-|`**BiConsumer<T,U>**`|`**(T,U)->void**`|`**ObjIntConsumer<T>**`, `**ObjLongConsumer<T>**`, `**ObjDoubleConsumer<T>**`|
-|`**BiFunction<T,U,R>**`|`**(T,U)->R**`|`**ToIntBiFunction<T,U>**`, `**ToLongBiFunction<T,U>**`, `**ToDoubleBiFunction<T,U>**`|
 
 
 
-- enerische Parameter (`**<R>**`, `**<S>**`, `**<T>**` usw.) können in Java nur an Referenztypen gebunden werden
-- **Boxing** wandelt primitive Typen in Referenztypen um, z.B. `**int**` zu `**Integer**`, **Unboxing** bezeichnet den umgekehrten Vorgang
-- **Autoboxing** führt je nach Bedarf Boxing oder Unboxing automatisch durch
-- Problem: "Boxed Values" benötigen mehr Speicherplatz und verursachen mehr Speicherzugriffe als Werte primitiver Typen
-- **Primitive Spezialisierungen** sind funktionale Interfaces, die nur auf primitiven Datentypen basieren und Autoboxing nicht zulassen
-
-
-
-|接口名|参数类型|返回类型|方法名|功能说明|示例 Lambda 表达式|
-|---|---|---|---|---|---|
-|`Predicate<T>`|`T`|`boolean`|`test(T t)`|判断条件（返回 true/false）|`x -> x > 10`|
-|`Function<T,R>`|`T`|`R`|`apply(T t)`|输入 T，返回 R|`x -> x.length()`|
-|`Consumer<T>`|`T`|`void`|`accept(T t)`|消费一个值（仅执行，无返回）|`x -> System.out.println(x)`|
-|`Supplier<T>`|无参数|`T`|`get()`|提供一个值（返回，无输入）|`() -> "Hello"`|
-|`UnaryOperator<T>`|`T`|`T`|`apply(T t)`|一元操作（输入输出类型相同）|`x -> x * x`|
-|`BinaryOperator<T>`|`T, T`|`T`|`apply(T t1, T t2)`|二元操作|`(a, b) -> a + b`|
-|`BiFunction<T,U,R>`|`T, U`|`R`|`apply(T, U)`|两个输入参数，返回结果|`(a, b) -> a + b.length()`|
-|`BiPredicate<T,U>`|`T, U`|`boolean`|`test(T, U)`|判断两个输入条件|`(a, b) -> a > b`|
-|`BiConsumer<T,U>`|`T, U`|`void`|`accept(T,U)`|消费两个输入值|`(a, b) -> System.out.println(a + b)`|
+| 接口名                 | 参数类型   | 返回类型      | 方法名                 | 功能说明                           | 示例 Lambda 表达式                         |
+| ------------------- | ------ | --------- | ------------------- | ------------------------------ | ------------------------------------- |
+| `Predicate<T>`      | `T`    | `boolean` | `test(T t)`         | 判断条件（返回 true/false）            | `x -> x > 10`                         |
+| `Function<T,R>`     | `T`    | `R`       | `apply(T t)`        | 输入 T，返回 R. 可以返回不同的数据类型的值       | `x -> x.length()`                     |
+| `Consumer<T>`       | `T`    | `void`    | `accept(T t)`       | 消费一个值（仅执行，无返回）                 | `x -> System.out.println(x)`          |
+| `Supplier<T>`       | 无参数    | `T`       | `get()`             | 提供一个值（返回，无输入）                  | `() -> "Hello"`                       |
+| `UnaryOperator<T>`  | `T`    | `T`       | `apply(T t)`        | 一元操作（输入输出类型相同） . 必须返回同一个数据类型的值 | `x -> x * x`                          |
+| `BinaryOperator<T>` | `T, T` | `T`       | `apply(T t1, T t2)` | 二元操作                           | `(a, b) -> a + b`                     |
+| `BiFunction<T,U,R>` | `T, U` | `R`       | `apply(T, U)`       | 两个输入参数，返回结果                    | `(a, b) -> a + b.length()`            |
+| `BiPredicate<T,U>`  | `T, U` | `boolean` | `test(T, U)`        | 判断两个输入条件                       | `(a, b) -> a > b`                     |
+| `BiConsumer<T,U>`   | `T, U` | `void`    | `accept(T,U)`       | 消费两个输入值                        | `(a, b) -> System.out.println(a + b)` |
 
 ```
 Predicate<String> checkLength = s -> s.length() > 5;
@@ -263,7 +246,150 @@ Consumer、Predicate 和 Function 都是 Java 中的 函数式接口，它们有
 
 ![](image/Pasted%20image%2020250502215445.png)
 
-# 3 Methodenreferenzen
+# 3 primitive specialization
+
+
+
+
+| Functional Interface    | Function Descriptor  | Primitive Specializations                                                                                                                                                                                                                                                                                             |
+| ----------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `**Predicate<T>**`      | `**T->boolean**`     | `**IntPredicate**`, `**LongPredicate**`, `**DoublePredicate**`                                                                                                                                                                                                                                                        |
+| `**Consumer<T>**`       | `**T->void**`        | `**IntConsumer**`, `**LongConsumer**`, `**DoubleConsumer**`                                                                                                                                                                                                                                                           |
+| `**Function<T, R>**`    | `**T->R**`           | `**IntFunction<R>**`, `**DoubleFunction<R>**`, `**LongFunction<R>**`, `**ToIntFunction<T>**`, `**ToDoubleFunction<T>**`, `**ToLongFunction<T>**`, `**IntToDoubleFunction**`, `**IntToLongFunction**`,  <br>`**DoubleToIntFunction**`, `**DoubleToLongFunction**`, `**LongToDoubleFunction**`, `**LongToIntFunction**` |
+| `**Supplier<T>**`       | `**()->T**`          | `**BooleanSupplier**`, `**IntSupplier**`, `**LongSupplier**`, `**DoubleSupplier**`                                                                                                                                                                                                                                    |
+| `**UnaryOperator<T>**`  | `**T->T**`           | `**IntUnaryOperator**`, `**LongUnaryOperator**`, `**DoubleUnaryOperator**`                                                                                                                                                                                                                                            |
+| `**BinaryOperator<T>**` | `**(T,T)->T**`       | `**IntBinaryOperator**`, `**LongBinaryOperator**`, `**DoubleBinaryOperator**`                                                                                                                                                                                                                                         |
+| `**BiPredicate<L,R>**`  | `**(L,R)->boolean**` |                                                                                                                                                                                                                                                                                                                       |
+| `**BiConsumer<T,U>**`   | `**(T,U)->void**`    | `**ObjIntConsumer<T>**`, `**ObjLongConsumer<T>**`, `**ObjDoubleConsumer<T>**`                                                                                                                                                                                                                                         |
+| `**BiFunction<T,U,R>**` | `**(T,U)->R**`       | `**ToIntBiFunction<T,U>**`, `**ToLongBiFunction<T,U>**`, `**ToDoubleBiFunction<T,U>**`                                                                                                                                                                                                                                |
+
+
+
+- enerische Parameter (`**<R>**`, `**<S>**`, `**<T>**` usw.) können in Java nur an Referenztypen gebunden werden
+- **Boxing** wandelt primitive Typen in Referenztypen um, z.B. `**int**` zu `**Integer**`, **Unboxing** bezeichnet den umgekehrten Vorgang
+- **Autoboxing** führt je nach Bedarf Boxing oder Unboxing automatisch durch
+- Problem: "Boxed Values" benötigen mehr Speicherplatz und verursachen mehr Speicherzugriffe als Werte primitiver Typen
+- **Primitive Spezialisierungen** sind funktionale Interfaces, die nur auf primitiven Datentypen basieren und Autoboxing nicht zulassen
+
+---
+
+
+In **Java**, _primitive specializations of functional interfaces_ refer to specialized versions of the standard functional interfaces (like `Function`, `Predicate`, etc.) that are optimized for **primitive types** such as `int`, `double`, and `long`.
+
+This specialization exists to **avoid boxing and unboxing overhead**, which can negatively impact performance when using primitive types in lambda expressions or functional programming patterns.
+
+
+Problem with Generic Functional Interfaces: 
+Standard functional interfaces like `Function<T, R>` only work with **reference types** (`Integer`, `Double`, etc.), not primitives (`int`, `double`):
+```
+Function<Integer, Integer> f = x -> x + 1;  // boxing occurs here
+```
+
+This leads to:
+- `int` → `Integer` (boxing)    
+- `Integer` → `int` (unboxing)
+
+
+---
+
+Java’s Solution: Primitive Specializations
+Java provides primitive-specific versions of functional interfaces in java.util.function, such as:
+
+|Use Case|Generic Interface|Primitive Specialized Version|
+|---|---|---|
+|`int` → `int`|`Function<Integer, Integer>`|`IntUnaryOperator`|
+|`int` → `double`|`Function<Integer, Double>`|`IntToDoubleFunction`|
+|`double` → `boolean`|`Predicate<Double>`|`DoublePredicate`|
+|`int` → void|`Consumer<Integer>`|`IntConsumer`|
+|no input → `int`|`Supplier<Integer>`|`IntSupplier`|
+
+---
+
+Example: With and Without Specialization
+
+Without Specialization (boxing involved):
+```
+Function<Integer, Integer> addOne = x -> x + 1;
+int result = addOne.apply(5);  // Boxed to Integer
+```
+
+
+With Primitive Specialization:
+```
+IntUnaryOperator addOne = x -> x + 1;
+int result = addOne.applyAsInt(5);  // No boxing
+```
+`applyAsInt(int operand)` is the specialized method that operates directly on primitives.
+
+
+---
+
+Why it Matters
+- ✅ **Performance**: Avoids runtime overhead caused by boxing.
+- ✅ **Memory-efficient**: Less garbage generated (no unnecessary wrapper objects).
+- ✅ **Cleaner code**: Still uses lambdas and functional style, but with better efficiency.
+
+
+## 3.1 例子
+
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.*;
+
+
+// Lässt sich jedes Predicate auch durch eine Function realisieren? Wenn ja, können wir die folgende Methode mit einer Function aufrufen (wie im zweiten Beispielaufruf unten)
+
+
+public class DifferencePredicateAndFunction {
+    // Methode
+    public static List<Integer> filterList(List<Integer> list, Predicate<Integer>
+            predicate) {
+        List<Integer> result = new ArrayList<>();
+        for (Integer i : list) {
+            if (predicate.test(i)) {
+                result.add(i);
+            }
+        }
+        return result;
+    }
+
+
+
+    // Aufrufe
+    public static void main(String[] args) {
+
+        // Parameter
+        List<Integer> list = Arrays.asList(1,2,3,4,5);
+        Predicate<Integer> p = x -> x % 2 == 0;
+        Function<Integer,Boolean> f = x -> x % 2 == 0;
+
+        // Using Predicate directly. In Predicate, the test method is used to check the condition.
+        //filterList(list, p);
+
+        // Using Function directly. In Function, the apply method is used to check the condition. there is no test method. Therefore. (predicate.test(i)) does not work.
+        //filterList(list,f);
+
+        // Valid: using Predicate
+        List<Integer> filteredByPredicate = filterList(list, p);
+        System.out.println("Filtered (Predicate): " + filteredByPredicate);
+
+        // Invalid: Function is not a Predicate
+        // This line will NOT compile:
+        // List<Integer> filteredByFunction = filterList(list, f);
+
+        // Convert Function to Predicate explicitly if needed:
+        Predicate<Integer> convertedPredicate = f::apply;
+        List<Integer> filteredByConvertedFunction = filterList(list, convertedPredicate);
+        System.out.println("Filtered (Function as Predicate): " + filteredByConvertedFunction);
+
+    }
+
+}
+```
+
+# 4 Methodenreferenzen
 
 - Eine **Methodenreferenz** ist eine kompakte Schreibweise für einen Lambda-Ausdruck, der einfach nur eine Methode aufruft, ohne weitere Logik
 - Eine Methodenreferenz kann anstelle eines Lambda-Ausdrucks immer dann verwendet werden, wenn das Lambda nur eine bestimmte Methode weiterreicht, z.b. als Predicate, Function oder Consumer
@@ -281,7 +407,7 @@ Consumer、Predicate 和 Function 都是 Java 中的 函数式接口，它们有
 
 
 
-## 3.1 例子 
+## 4.1 例子 
 
 引用静态方法
 
@@ -435,3 +561,111 @@ Neue Liste: [Neu]
 |对象的实例方法引用|`objekt::instanzMethode`|`x -> objekt.instanzMethode(x)`|
 |类的实例方法引用|`Klasse::instanzMethode`|`(obj) -> obj.instanzMethode()`|
 |构造器引用|`Klasse::new`|`() -> new Klasse()`|
+
+
+## 4.2 例子2
+
+```
+import java.util.function.Predicate;
+
+
+// Implementieren Sie eine Klasse namens TestOdd, die einen Integer daraufhin überprüfen
+//soll, ob dieser ungerade ist. Wählen Sie hierfür ein passendes funktionales Interface, das
+//von TestOdd implementiert wird.
+
+public class TestOdd implements Predicate<Integer> {
+    @Override
+    public boolean test(Integer integer) {
+        return integer % 2 != 1;
+    }
+    
+}
+
+// Equivalent Lambda function i -> i % 2 == 1
+```
+
+
+```
+import java.util.function.BinaryOperator;
+import java.util.function.UnaryOperator;
+
+// mplementieren Sie nun eine Klasse namens Multiply, die zwei übergebene Integer
+//miteinander multipliziert und das Ergebnis zurückgibt. Wählen Sie hierfür ein passendes
+//funktionales Interface, das von Multiply implementiert wird.
+
+public class Multiply implements BinaryOperator<Double> {
+    
+    @Override
+    public Double apply (Double a, Double b) {
+        return a * b;
+    }
+}
+
+// Equivalent Lambda function (a, b) -> a * b
+
+```
+
+
+```
+import java.util.function.UnaryOperator;
+
+
+// Implementieren Sie eine Klasse namens MapPlusThree, die einen Integer erhält, diesen
+//um 3 erhöht und anschließend zurückgibt. Wählen Sie hierfür ein passendes funktionales
+//Interface, das von MapPlusThree implementiert wird
+
+public class MapPlusThree implements UnaryOperator<Integer> { 
+    @Override
+    public Integer apply(Integer integer) {
+        return integer + 3;
+    }
+    
+    
+}
+
+// Equivalent Lambda function  i -> i + 3
+
+```
+
+# 5 funktional interface 
+
+
+在 Java 中，**funktionale Interfaces**（英文：**functional interfaces**）是只包含一个 **abstrakten Methoden**（抽象方法）的接口。它们是 Java 8 引入 Lambda 表达式时的核心概念。
+
+一个 **Functional Interface** 是一个接口，其中 **只有一个抽象方法**。它可以有多个 `default` 或 `static` 方法，但只能有一个抽象方法。
+
+你可以用注解 `@FunctionalInterface` 来标记它，帮助编译器检查：
+
+```
+@FunctionalInterface
+public interface MyFunction {
+    int apply(int x, int y);
+}
+```
+
+
+它们用于：
+- Lambda 表达式
+- 方法引用
+- 函数式编程风格（Streams、Optional、Predicate 等）
+
+Lambda 使用 Functional Interface
+
+```
+Function<String, Integer> stringLength = s -> s.length();
+System.out.println(stringLength.apply("hello")); // 输出 5
+```
+
+
+## 5.1 常见的 Java 内置 Functional Interfaces：
+
+|接口|抽象方法签名|用途|
+|---|---|---|
+|`Runnable`|`void run()`|无参无返回值的任务|
+|`Callable<T>`|`T call()`|无参但有返回值的任务|
+|`Consumer<T>`|`void accept(T t)`|接收一个参数，没有返回值|
+|`Supplier<T>`|`T get()`|提供一个值，没有参数|
+|`Function<T,R>`|`R apply(T t)`|输入一个参数，返回一个结果|
+|`Predicate<T>`|`boolean test(T t)`|判断一个条件，返回 true/false|
+|`BiFunction<T,U,R>`|`R apply(T t, U u)`|两个参数输入，一个结果输出|
+
