@@ -4,17 +4,17 @@ https://git.tu-berlin.de/users/sign_in
 
 alle tutotium in demseble gitlab repo 
 
-![](image/19d4334b18ff6ef01ae70886b1ae24c.jpg)
+![](19d4334b18ff6ef01ae70886b1ae24c.jpg)
 
 
-![](image/5a4ab3a3e3f94c85abe453ac6adbf23.jpg)
+![](5a4ab3a3e3f94c85abe453ac6adbf23.jpg)
 
 
 # 1 Complier 和 JVM 的关系 
 
-![](image/60e94f6d5f9aa5c3b92e69c5f364714.jpg)
+![](60e94f6d5f9aa5c3b92e69c5f364714.jpg)
 
-![](image/e4408faf4496468a34cf9fbe6b2b8b7.jpg)
+![](e4408faf4496468a34cf9fbe6b2b8b7.jpg)
 
 
 # 2 Aufgabe 1: Annotations Intro
@@ -61,10 +61,10 @@ constructors)
 
 String vaule()   define a method with name value  with data type Sting 
 
-![](image/831ace440f478f5d5e2cee549a91069.jpg)
+![](831ace440f478f5d5e2cee549a91069.jpg)
 
 
-![](image/6faf35740af6dce6e52e3433a6587cb.jpg)
+![](6faf35740af6dce6e52e3433a6587cb.jpg)
 
 eien Annotation vielfach eingeben ? in welche Fall muss dasselebe Annotation vielfach eingebenen werden muss 
 
@@ -138,11 +138,11 @@ in RUntim. Object zu query
 
 ## 5.1 tutor 课上的例子 
 
-![](image/f8651f6c32578b3bc35a2b359d3a87e.jpg)
+![](f8651f6c32578b3bc35a2b359d3a87e.jpg)
 
 
 
-![](image/bc82db66ae02bb442463ba09a5a8e3f.jpg)
+![](bc82db66ae02bb442463ba09a5a8e3f.jpg)
 
 
 

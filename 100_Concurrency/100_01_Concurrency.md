@@ -38,7 +38,78 @@ To create our “own“ thread, we can either extend the class Thread or impleme
 If we just invoke this run() method, the code within it is (obviously) executed sequentially. If we want to run it in parallel, we have to invoke the start() method (defined in class Thread), which executes the run()method in a new thread in parallel. 
 
 
-Example: Thread
+How to Start a Parallel Thread
+To start a thread in parallel:
+- **Call `start()`** on a `Thread` object (this will invoke the `run()` method in a new thread).
+- **Do not call `run()` directly**, or it will execute in the **main thread**, not a new one.
+
+### 2.1.1 Thread vs. Runnable
+
+Normally, the approach via Runnable is taken unless the respective class is onlya thread.
+
+extends Thread
+- Has direct access to instance methods of superclass
+- Can have no other superclass
+- Create and start instance directly
+
+- **Inherits** from `Thread` class.
+- **Cannot extend** any other class (Java has single inheritance).
+- Each instance **is a thread**, so can be directly started with `.start()`.
+- Can override the `run()` method to define behavior.
+- **Tight coupling** between task and thread execution.
+
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Running in MyThread");
+    }
+}
+MyThread t = new MyThread();
+t.start();
+```
+
+
+
+---
+
+
+implements Runnable
+- Needs to access those methods via Thread.currentThread()
+- Can have arbitrary superclasses
+- Build new thread from runnable object and start that thread
+- Can be used with thread pools
+
+- **Implements** `Runnable` interface.
+- Can **extend any other class** (more flexible).
+- Must define the `run()` method.
+- Create a `Thread` and pass the `Runnable` instance to it.
+- Better separation of task and thread, especially useful in **thread pools / executors**.
+
+```java
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Running in MyRunnable");
+    }
+}
+Thread t = new Thread(new MyRunnable());  // Better separation of task and thread, especially useful in **thread pools / executors**.
+t.start();
+```
+
+---
+
+Use **`Runnable`** (or even better, `Callable` with `Executors`) when possible, unless you have a specific reason to subclass `Thread`.
+
+|Feature|`extends Thread`|`implements Runnable`|
+|---|---|---|
+|Inheritance|Must extend `Thread`|Can extend any class|
+|Reusability|Less reusable|More reusable|
+|Separation of concern|Not separated (thread = task)|Clear separation (task ≠ thread)|
+|Thread pools|❌ Not ideal|✅ Recommended|
+|Flexibility|Limited|High|
+
+
+
+### 2.1.2 Example: Thread
 ```java
 public class CounterThread extends Thread {
     public void run() {
@@ -83,7 +154,7 @@ I am Thread-0 and my number is 10
 ```
 
 
-Example: Runnable
+### 2.1.3 Example: Runnable
 ```java
 public class CounterRunnable implements Runnable {
     public void run() {
@@ -129,65 +200,6 @@ I am Thread-1 and my number is 10
 
 
 ---
-
-Thread vs. Runnable
-
-Normally, the approach via Runnable is taken unless the respective class is onlya thread.
-
-extends Thread
-- Has direct access to instance methods of superclass
-- Can have no other superclass
-- Create and start instance directly
-
-- **Inherits** from `Thread` class.
-- **Cannot extend** any other class (Java has single inheritance).
-- Each instance **is a thread**, so can be directly started with `.start()`.
-- Can override the `run()` method to define behavior.
-- **Tight coupling** between task and thread execution.
-
-```java
-class MyThread extends Thread {
-    public void run() {
-        System.out.println("Running in MyThread");
-    }
-}
-MyThread t = new MyThread();
-t.start();
-```
-
-implements Runnable
-- Needs to access those methods via Thread.currentThread()
-- Can have arbitrary superclasses
-- Build new thread from runnable object and start that thread
-- Can be used with thread pools
-
-- **Implements** `Runnable` interface.
-- Can **extend any other class** (more flexible).
-- Must define the `run()` method.
-- Create a `Thread` and pass the `Runnable` instance to it.
-- Better separation of task and thread, especially useful in **thread pools / executors**.
-
-```java
-class MyRunnable implements Runnable {
-    public void run() {
-        System.out.println("Running in MyRunnable");
-    }
-}
-Thread t = new Thread(new MyRunnable());  // Better separation of task and thread, especially useful in **thread pools / executors**.
-t.start();
-```
-
----
-
-Use **`Runnable`** (or even better, `Callable` with `Executors`) when possible, unless you have a specific reason to subclass `Thread`.
-
-|Feature|`extends Thread`|`implements Runnable`|
-|---|---|---|
-|Inheritance|Must extend `Thread`|Can extend any class|
-|Reusability|Less reusable|More reusable|
-|Separation of concern|Not separated (thread = task)|Clear separation (task ≠ thread)|
-|Thread pools|❌ Not ideal|✅ Recommended|
-|Flexibility|Limited|High|
 
 ## 2.2 Properties of threads
 
