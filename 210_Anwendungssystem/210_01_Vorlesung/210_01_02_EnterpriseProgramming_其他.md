@@ -1,5 +1,8 @@
 
+
+
 # 1 Test with JUnit
+![](image/572bf65f61697b7a17ee72b66e10c10.jpg)
 
 
 All files located in a specific test folder (usually src/test/java) are considered tests and will not be packaged into the final artifact.
@@ -36,4 +39,12 @@ publicclassMain {
 ```
 
 
-Lombok has the @Log annotation, which automatically creates the Logger log = …snippet.
+==Lombok has the @Log annotation, which automatically creates the Logger log = …snippet.==
+
+
+
+
+
+
+
+
