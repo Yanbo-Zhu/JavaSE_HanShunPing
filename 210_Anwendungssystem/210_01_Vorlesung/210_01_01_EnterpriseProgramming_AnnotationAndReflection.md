@@ -56,7 +56,42 @@ For such data, we define so-called elements:
 ![[Pasted image 20250506161113.png]]
 
 
+---
 
+```java
+<access modifier> @interface Annotationname {
+	<Datentyp><Name>();
+}
+```
+
+```java
+public @interface FooBar{
+	String foo() default "bar";
+}
+
+public @interface Author{
+	String name() default "no author";
+}
+
+```
+
+
+```java
+@FooBar(foo="foobar")
+@Author(name = "Tim")
+
+
+public class C1 {}
+
+oder
+
+@FooBar
+public class C1 {}
+
+@Author
+public int method sum {
+}
+```
 
 ## 1.3 The value() element in single-element annotations
 
@@ -114,7 +149,33 @@ It expects a single parameter of the ElementType enum describing said target:
 - TYPE_PARAMETER : Generic type parameter declarations (in generic classes, interfaces, methods,
 constructors)
 
+
+```java
+@Target(ElementType.TYPE)
+public @interface Author {
+String value();
+}
+
+@Author("DB") // Works
+@Author("tim")
+public class HelloWorld {
+
+}
+```
+
 ## 1.5 @Retention
+
+Beschränkt wie lange eine Annotation von der JVM beibehalten werden soll
+SOURCE: die Annotation ist nur im Source Code vorhanden
+CLASS: die Annotation ist während der Compile Zeit vorhanden
+RUNTIME: die Annotation ist während der Laufzeit vorhanden
+
+```java
+@Retention(RetentionPolicy.RUNTIME)
+public @interface FooBar {…}
+```
+
+
 
 ![[Pasted image 20250506161914.png]]
 
@@ -158,6 +219,20 @@ To do this, **two annotations** are involved:
 
 ![[Pasted image 20250506162522.png]]
 
+```java
+@Repeatable(Authors.class)
+public @interface Author {
+String value();
+}
+public @interface Authors {
+Author[] value();
+}
+@Author(“DB")
+@Author(“MG")
+public class HelloWorld {
+// ...
+}
+```
 
 ### 1.6.1 Example
 
@@ -210,6 +285,89 @@ This will return both `@A("one")` and `@A("two")`.
 ### 1.6.2 example 2 
 
 ![[Pasted image 20250506162917.png]]
+
+
+## 1.7 例子
+
+https://jade-spot-4b8.notion.site/Annotations-1e236049d2fb80aebbbfdb209fbcc967
+
+![](image/Screenshot_2025-04-27_at_21.17.22.webp)
+
+----
+
+Gegeben ist die Klasse Cat:
+```java
+@Important
+public class Cat {
+
+    String name;
+    int age;
+
+    public Cat(String name){
+        this.name = name;
+    }
+
+		@UseMethodeImmediately(times = 3)
+    public void meow(){
+        System.out.println("Meow");
+    }
+
+    public void eat(){
+        System.out.println("Eating");
+    }
+
+}
+```
+
+
+Schreibt eine Annotation @Important, die gleichzeitig bei Klassen und Methoden verwendet werden darf.
+Schreibt eine weitere Klasse mit einer Main-Methode. Dort soll eine Instanz von Cat erzeugt werden.
+Anschließend soll mit Hilfe von Reflections überprüft werden, ob die Klasse der Instanz die Annotation @Important hat.
+Falls ja, soll “Class is important” ausgegeben werden. Falls nein, soll “Class is not important ausgegeben werden”.
+
+
+Schreibt eine weitere Annotation @UseMethodeImmediately, die nur auf Methoden verwendet werden darf.
+Die Annotation enthält ein Int-Paramater names ,,times”.
+In der Main Methode soll überprüft werden, welche Methoden der Klasse Cat die Annotation @UseMethodeImmediately hat.
+Sobald die Methode gefunden wurde, soll die Methode times-mal wiederholt werden.
+
+
+
+
+---
+
+Gegeben ist eine neue Version der Klasse Cat:
+
+```java
+public class Cat {
+    private final String name;
+    private int age;
+
+    public Cat(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public void meow(){
+        System.out.println("Meow");
+    }
+}
+```
+
+
+Schreibt eine Main-Methode. Erstellt eine Instanz der Klasse.
+
+Danach sollen dort mit Hilfe von Reflections die Fields der Klasse Cat ausgegeben werden (name, age).
+
+Ändert mit Hilfe von Reflection die private Variable (name).
 
 # 2 Reflections
 
