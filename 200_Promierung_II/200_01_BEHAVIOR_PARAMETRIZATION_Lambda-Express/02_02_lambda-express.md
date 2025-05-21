@@ -193,9 +193,6 @@ public class FunctionChainingExample {
 ## 2.4 预定义的函数式接口库 in java.util.function
 
 
-
-
-
 | 接口名                 | 参数类型   | 返回类型      | 方法名                 | 功能说明                           | 示例 Lambda 表达式                         |
 | ------------------- | ------ | --------- | ------------------- | ------------------------------ | ------------------------------------- |
 | `Predicate<T>`      | `T`    | `boolean` | `test(T t)`         | 判断条件（返回 true/false）            | `x -> x > 10`                         |
@@ -294,6 +291,7 @@ This leads to:
 
 Java’s Solution: Primitive Specializations
 Java provides primitive-specific versions of functional interfaces in java.util.function, such as:
+
 
 |Use Case|Generic Interface|Primitive Specialized Version|
 |---|---|---|
