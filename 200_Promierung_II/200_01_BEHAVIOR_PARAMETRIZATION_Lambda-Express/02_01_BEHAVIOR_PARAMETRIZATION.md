@@ -1,5 +1,5 @@
 
-
+# 1 理论 
 
 
 ![](image/Pasted%20image%2020250502205949.png)
@@ -15,9 +15,52 @@ Value Parametrization
 - Anstatt nur Werte zu übergeben, wird eine Strategie oder ein Verhalten als Argument übergeben
 - Dies ermöglicht eine höhere Wiederverwendbarkeit und Flexibilität, da der Code nicht für jede spezifische Operation angepasst werden muss
 
+Warum Konstanten in der funktionalen Programmierung so wichtig sind
+![](image/Pasted%20image%2020250601173714.png)
 
-# 1 Beispiel
 
+# 2 Beispiel
+
+```java
+// Interface für ein Verhalten
+interface ApplePredicate {
+    boolean test(Apple apple);
+}
+
+// Methode, die ein Verhalten erwartet
+List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
+    List<Apple> result = new ArrayList<>();
+    for (Apple apple : inventory) {
+        if (p.test(apple)) {
+            result.add(apple);
+        }
+    }
+    return result;
+}
+```
+
+Aufruf sähe so aus:
+```java
+// Konkrete Implementierung des Verhaltens
+class GreenApplePredicate implements ApplePredicate {
+    public boolean test(Apple apple) {
+        return "green".equals(apple.getColor());
+    }
+}
+
+
+// Aufruf der filterApples-Methode
+List<Apple> greenApples = filterApples(inventory, new GreenApplePredicate());
+```
+
+
+Oder in super kurz (ab Java 8, mit Lambda):
+```java
+List<Apple> greenApples = filterApples(inventory, apple -> "green".equals(apple.getColor()));
+```
+
+
+---
 
 ![](image/Pasted%20image%2020250502210043.png)
 
@@ -60,7 +103,7 @@ Value Parametrization
 
 
 
-# 2 Beispiel 2 
+# 3 Beispiel 2 
 
 
 In einem Java Programm soll eine Liste von Büchern nach bestimmten Kriterien gefiltert werden, z.B. nach Autor oder Erscheinungsjahr. In dieser Aufgabe geht es darum, wie man solche Filter flexibel gestalten kann, ohne den Code bei jeder neuen Anforderung ändern zu müssen.

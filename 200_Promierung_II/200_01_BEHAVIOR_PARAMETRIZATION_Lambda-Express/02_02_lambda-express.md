@@ -41,6 +41,14 @@ Lambda-Ausdrücke bestehen aus...
 
 # 2 Functional Descriptor 
 
+
+Funktionstyp 	Aufruf-Methode
+Function 	.apply()
+UnaryOperator 	.apply()
+Predicate 	.test()
+Supplier 	.get()
+Consumer 	.accept()
+
 ## 2.1 Functional Descriptor am Beispiel von Predicate
 
 
