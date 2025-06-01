@@ -675,3 +675,164 @@ System.out.println(stringLength.apply("hello")); // 输出 5
 |`Predicate<T>`|`boolean test(T t)`|判断一个条件，返回 true/false|
 |`BiFunction<T,U,R>`|`R apply(T t, U u)`|两个参数输入，一个结果输出|
 
+# 6 function Interface 的例子
+
+
+```java
+package functions;  
+  
+public class FunctionsJava {  
+  
+    // A)  
+    public int multiply(int x, int y) {  
+        return x * y;  
+    }  
+  
+    // B)  
+    public double divide(double x, double y) {  
+        if (y == 0) {  
+            return 0; // eigentlich würden wir hier gerne eine Warnung ausgeben, statt eine Zahl zurückzugeben  
+        }  
+  
+        return x / y;  
+    }  
+  
+    // C)  
+    public void printSum(int x, int y) {  
+        System.out.println(x + " + " + y + " = " + (x+y));  
+    }  
+  
+    public static void main(String[] args) {  
+        FunctionsJava f = new FunctionsJava();  
+  
+        // A)  
+        System.out.println("A");  
+        System.out.println(f.multiply(10, 5));  
+        System.out.println(f.multiply(10, -5));  
+  
+        // B)  
+        System.out.println("B");  
+        System.out.println(f.divide(10, 5));  
+        System.out.println(f.divide(10, 0));  
+  
+        // C)  
+        System.out.println("C");  
+        f.printSum(10, 5);  
+        f.printSum(10, -5);  
+    }  
+}
+```
+
+Multiply.java
+```
+import java.util.function.BinaryOperator;  
+import java.util.function.UnaryOperator;  
+  
+// mplementieren Sie nun eine Klasse namens Multiply, die zwei übergebene Integer  
+//miteinander multipliziert und das Ergebnis zurückgibt. Wählen Sie hierfür ein passendes  
+//funktionales Interface, das von Multiply implementiert wird.  
+  
+public class Multiply implements BinaryOperator<Double> {  
+      
+    @Override  
+    public Double apply (Double a, Double b) {  
+        return a * b;  
+    }  
+}  
+  
+// Equivalent Lambda function (a, b) -> a * b
+```
+
+
+MapPlusThree.java
+```
+import java.util.function.UnaryOperator;  
+  
+  
+// Implementieren Sie eine Klasse namens MapPlusThree, die einen Integer erhält, diesen  
+//um 3 erhöht und anschließend zurückgibt. Wählen Sie hierfür ein passendes funktionales  
+//Interface, das von MapPlusThree implementiert wird  
+  
+public class MapPlusThree implements UnaryOperator<Integer> {   
+    @Override  
+    public Integer apply(Integer integer) {  
+        return integer + 3;  
+    }  
+      
+      
+}  
+  
+// Equivalent Lambda function  i -> i + 3
+```
+
+TestOdd.java
+```
+import java.util.function.Predicate;  
+  
+  
+// Implementieren Sie eine Klasse namens TestOdd, die einen Integer daraufhin überprüfen  
+//soll, ob dieser ungerade ist. Wählen Sie hierfür ein passendes funktionales Interface, das  
+//von TestOdd implementiert wird.  
+  
+public class TestOdd implements Predicate<Integer> {  
+    @Override  
+    public boolean test(Integer integer) {  
+        return integer % 2 != 1;  
+    }  
+      
+}  
+  
+// Equivalent Lambda function i -> i % 2 == 1
+```
+
+
+DifferencePredicateAndFunction.java
+```
+import java.util.ArrayList;  
+import java.util.Arrays;  
+import java.util.List;  
+import java.util.function.*;  
+  
+  
+// Lässt sich jedes Predicate auch durch eine Function realisieren? Wenn ja, können wir die folgende Methode mit einer Function aufrufen (wie im zweiten Beispielaufruf unten)  
+  
+  
+public class DifferencePredicateAndFunction {  
+    // Methode  
+    public static List<Integer> filterList(List<Integer> list, Predicate<Integer>  
+            predicate) {  
+        List<Integer> result = new ArrayList<>();  
+        for (Integer i : list) {  
+            if (predicate.test(i)) {  
+                result.add(i);  
+            }  
+        }  
+        return result;  
+    }  
+  
+  
+  
+    // Aufrufe  
+    public static void main(String[] args) {  
+  
+        // Parameter  
+        List<Integer> list = Arrays.asList(1,2,3,4,5);  
+        Predicate<Integer> p = x -> x % 2 == 0;  
+        Function<Integer,Boolean> f = x -> x % 2 == 0;  
+  
+        // Using Predicate directly. In Predicate, the test method is used to check the condition.  
+        //filterList(list, p);  
+        // Using Function directly. In Function, the apply method is used to check the condition. there is no test method. Therefore. (predicate.test(i)) does not work.        //filterList(list,f);  
+        // Valid: using Predicate        List<Integer> filteredByPredicate = filterList(list, p);  
+        System.out.println("Filtered (Predicate): " + filteredByPredicate);  
+  
+        // Invalid: Function is not a Predicate  
+        // This line will NOT compile:        // List<Integer> filteredByFunction = filterList(list, f);  
+        // Convert Function to Predicate explicitly if needed:        Predicate<Integer> convertedPredicate = f::apply;  
+        List<Integer> filteredByConvertedFunction = filterList(list, convertedPredicate);  
+        System.out.println("Filtered (Function as Predicate): " + filteredByConvertedFunction);  
+  
+    }  
+  
+}
+```
