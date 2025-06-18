@@ -8,6 +8,9 @@ Annotations themselves don’t add functionality, they don’t have a “functio
 We can annotate classes, methods, constructors, fields, etc. –what can be annotated depends on the respective annotation.
 
 
+Annotion hat keine Funktionialitat 
+
+
 @Override–the annotated element is meant to override element in superclass. If its not found in one of the superclasses, cause a compilation error
 @SuppressWarnings–ignore compile-time warnings for this element
 @Deprecated–marks a method as deprecated. Causes a compiler warning if the method is used.
@@ -18,6 +21,8 @@ We can annotate classes, methods, constructors, fields, etc. –what can be anno
 
 
 Annnotationscanbea simple marker(e.g., @Override) ortheycanbeusedtoaddspecificvaluestothetarget(in bracketsafter theannotationname):
+
+in Unternehmen weiss,  das Author hat xx methoed aufgebaut 
 
 ```
 @Author(name="Jane Doe", date="1970-01-01")
@@ -34,6 +39,8 @@ iii) the element date has the value “1970-01-01“
 
 
 ## 1.2 develop our own annotations.
+
+![](image/4573eb61b1afef3c5f7654215b33bfb.jpg)
 
 
 General syntax:
@@ -94,6 +101,10 @@ public int method sum {
 ```
 
 ## 1.3 The value() element in single-element annotations
+
+
+![](image/e9e5b4af228572b985bf6a0ab679a6e.jpg)
+
 
 
 If an annotation only contains a single element, its name should be value(). In this case, the element name can be omitted.
@@ -161,7 +172,21 @@ String value();
 public class HelloWorld {
 
 }
+
+
+
 ```
+
+
+
+```
+@Target(ElementType.METHODE)
+@Retention(RetentionPolicy.SOURCE)
+public @interface Author override  { // overide an Klassen ergibt keinen Sinn
+	String value();
+}
+```
+
 
 ## 1.5 @Retention
 
@@ -175,6 +200,7 @@ RUNTIME: die Annotation ist während der Laufzeit vorhanden
 public @interface FooBar {…}
 ```
 
+![](image/6cb35fcc53bb6794bd3b0d7275aa10e.jpg)
 
 
 ![[Pasted image 20250506161914.png]]
@@ -205,6 +231,7 @@ When marking A as @Repeatable, we need another annotation B whose value() method
 ```
 @Repeatable(B.class)
 public @interface A{String value();}
+
 public @interface B{A[] value();}
 ```
 
@@ -293,6 +320,38 @@ https://jade-spot-4b8.notion.site/Annotations-1e236049d2fb80aebbbfdb209fbcc967
 
 ![](image/Screenshot_2025-04-27_at_21.17.22.webp)
 
+```java
+
+@Target(ElementType.TYPE)
+@Retention(RentenionPolicy.RUNTIME)
+@Repeatable(myAnnotationRepeats.class)
+public @interface MyAnnotation {
+	//   () 要写上 应为 interface 中只能有 method, keine variable 
+	String value();
+
+	//Int count(value = 9001)
+	//String[] arrayParam (value=[])
+	int count()  default 9001;
+	String[] arrayParam() default {}  // warum {}  , nicht null   .  `[]` ist **kein gültiges Literal**, sondern wird nur in Deklarationen oder beim Zugriff verwendet.
+	// String[] b = new String[]{}; // ✅ auch korrekt
+// String[] c = [];     // ❌ Syntaxfehler
+} 
+
+```
+
+
+![](image/Pasted%20image%2020250618131518.png)
+
+
+用来储藏 myAnnotationArray
+![](image/Pasted%20image%2020250618131533.png)
+
+```
+@myAnnotation 
+```
+
+
+
 ----
 
 Gegeben ist die Klasse Cat:
@@ -307,7 +366,7 @@ public class Cat {
         this.name = name;
     }
 
-		@UseMethodeImmediately(times = 3)
+	@UseMethodeImmediately(times = 3)
     public void meow(){
         System.out.println("Meow");
     }
@@ -371,6 +430,15 @@ Danach sollen dort mit Hilfe von Reflections die Fields der Klasse Cat ausgegebe
 
 # 2 Reflections
 
+在compliing pahse 改写代码 , ohne orgianle source zu andern
+
+
+Reflections immer nur dann benuzten , wenn iht unbedingt muesst  
+- fehleranfallig
+- uneffizent
+
+
+Reflections is , wie know and change the code during its own runtime 
 
 ==A program can know and change its own behaviour during its own runtime.==
 With object-oriented programming languages, this means that information about classes can be queried during runtime (e.g., its name), and that their behaviour can be modified (e.g., setting a field to private).
@@ -543,6 +611,8 @@ Afterwards, (originally private) Methods can be called by calling Method.invoke(
 
 
 
+
+
 # 3 Working with annotations and reflections
 
 
@@ -556,9 +626,20 @@ The annotations of a class can be accessed via the interface Annotation, which e
 ![[Pasted image 20250506172128.png]]
 
 
+## 3.1 例子2
+
+![](image/daf99790d3f2d6f9e5cc3bcdb3cb57a.jpg)
 
 
+![](image/Pasted%20image%2020250618132306.png)
 
+
+输出为 
+
+![](image/Pasted%20image%2020250618132323.png)
+所有 annotation 的 value 
+
+`system.out.printlin(a.value()[0])`  也会给出 
 
 
 
