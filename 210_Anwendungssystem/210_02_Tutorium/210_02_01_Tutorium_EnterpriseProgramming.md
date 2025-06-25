@@ -116,17 +116,34 @@ Lombok , (durch Complier :   Source -> Complier -> Class)   , Complier add the s
 @AllArgsConstructor
 @Log
 public class User {
-private @Getter @Setter String name;
-private @Getter @Setter boolean loggedIn;
-private @Getter @Setter String profileUrl;
-private @Getter int age;
-User() {
-log.info("Hello from No-Args Constructor");
-}
+	private @Getter @Setter String name;
+	private @Getter @Setter boolean loggedIn;
+	private @Getter @Setter String profileUrl;
+	private @Getter int age;
+	
+	User() {
+		log.info("Hello from No-Args Constructor");
+	}
 }
 ```
 
----
+
+
+
+`@toString`
+- without toString():  println(obeject)  give us eine referenz/Pointer , der zeigt sich auf , to addresse,  wo der object abgespeichert 
+- with toString():   println(object):  all property s value  gezeigt 
+
+
+
+@Setter
+@Getter
+
+|注解|作用|
+|---|---|
+|`@NoArgsConstructor`|无参构造器|
+|`@AllArgsConstructor`|所有字段的构造器|
+|`@RequiredArgsConstructor`|只包含 `final` 和 `@NonNull` 字段的构造器|
 
 
 # 5 Reflection 

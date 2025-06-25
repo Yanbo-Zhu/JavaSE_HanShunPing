@@ -146,12 +146,14 @@ You **cannot** write `@MyAnnotation("example")` in this case.
 ![[Pasted image 20250506161914.png]]
 
 - How can we specify the annotation target (i.e., whether it works for classes or methods or …)?
+wo darf ich meine Selbstgebaute Annotation hinschreiben 
+
 ==@Target is an annotation for annotating definitions of annotation types. It restricts the kind of element the annotation can be used on, i.e., where in the source code an annotation can be written.==
 
 It expects a single parameter of the ElementType enum describing said target:
 - ANNOTATION_TYPE : Other annotations
 - CONSTRUCTOR : Constructor declarations
-- FIELD : Variable declarations in a class or object
+- FIELD : Variable declarations in a class or object   (证明这个 annotation 是下载 某个class 的 variable ,不是  method 上面的 )
 - LOCAL_VARIABLE : Local variable declarations in a function
 - METHOD : Method declarations
 - PACKAGE: Package declarations
@@ -191,6 +193,7 @@ public @interface Author override  { // overide an Klassen ergibt keinen Sinn
 ## 1.5 @Retention
 
 Beschränkt wie lange eine Annotation von der JVM beibehalten werden soll
+
 SOURCE: die Annotation ist nur im Source Code vorhanden
 CLASS: die Annotation ist während der Compile Zeit vorhanden
 RUNTIME: die Annotation ist während der Laufzeit vorhanden
@@ -222,7 +225,7 @@ public @interface FooBar {…}
 
 ## 1.6 @Repeatable
 
-- Can we specify how many times an annotation can be used on a specific target?
+- Can we specify how many times an annotation can be used on a specific target?    mehrmals die gleiche Annotation 
 
 When we want to use an annotation A multiple times on the same target, we have to mark the definition of that annotation A as @Repeatable. 
 
@@ -427,6 +430,45 @@ Schreibt eine Main-Methode. Erstellt eine Instanz der Klasse.
 Danach sollen dort mit Hilfe von Reflections die Fields der Klasse Cat ausgegeben werden (name, age).
 
 Ändert mit Hilfe von Reflection die private Variable (name).
+
+
+
+----
+
+
+```java
+public class HelloWorld{
+	@MyAnnotation(1.0)
+	int i1;
+
+	@MyAnnotation(ann1="string", ann2={"string", "array"}, value=1.0)
+	int i2;
+
+}
+
+
+@Target(ElementType.FIELD)
+public @interface MyAnnotation {
+	//   () 要写上 应为 interface 中只能有 method, keine variable 
+	double value();
+
+	//Int count(value = 9001)
+	//String[] arrayParam (value=[])
+	String ann1()  default "";
+	String[] ann2() default {}  // warum {}  , nicht null   .  `[]` ist **kein gültiges Literal**, sondern wird nur in Deklarationen oder beim Zugriff verwendet.
+	// String[] b = new String[]{}; // ✅ auch korrekt
+// String[] c = [];     // ❌ Syntaxfehler
+} 
+
+
+
+
+```
+
+
+To enforce that the `ann2()` array in your annotation can only contain **exactly 2 elements**, Java doesn't support this directly in the annotation declaration itself — **you must implement a validation mechanism**, typically using **reflection at runtime** or with **an annotation processor at compile-time**.
+
+
 
 # 2 Reflections
 
