@@ -4,8 +4,7 @@
 
 ==Dependency Injection is a design pattern where object creation and using the object are separated from each other.==
 
-An object receives all other objects it depends on as parameter, so the object itself does not need to “know”
-how to construct the object it depends on. Instead, the objects are provided by an Injector.
+An object receives all other objects it depends on as parameter, so the object itself does not need to “know” how to construct the object it depends on. Instead, the objects are provided by an Injector.
 
 
 It sounds complicated but is pretty easy: give an object its instance variables without writing explicit newcalls. Dependency Injection has multiple advantages:
