@@ -80,7 +80,7 @@ implements Runnable
 - Can be used with thread pools
 
 - **Implements** `Runnable` interface.
-- Can **extend any other class** (more flexible).
+- ==Can **extend any other class** (more flexible).==
 - Must define the `run()` method.
 - Create a `Thread` and pass the `Runnable` instance to it.
 - Better separation of task and thread, especially useful in **thread pools / executors**.
@@ -209,6 +209,9 @@ I am Thread-1 and my number is 10
 
 
 Thread lifecycle
+![](image/Pasted%20image%2020250528124806.png)
+
+
 ![[Pasted image 20250416142136.png]]
 
 
@@ -289,9 +292,14 @@ try {
 
 如果你想让程序在 `catch` 块里“记住”自己被中断了，就要 **重新调用一次 `interrupt()`**，否则这个信号就“丢了”。
 
+## 2.3 run() and start()
 
 
-## 2.3 Interdependencies of threads join()
+Threads startet man IMMER MIT .start()
+Niemals mit run()  -> Methode Lauft, aber nicht parallel . nur run methods aufgeruft, aber nicht neue Thread erzeugt ( im Thread lauft das run() method execution )
+
+
+## 2.4 Interdependencies of threads join()
 
 Most program sections can be run in parallel as these sections do not have interdependencies.
 There are some exceptions, though:
@@ -400,10 +408,23 @@ Threads that are waiting for a lock are in state Blocked
 什么是 `synchronized block`？
 Java 中的 `synchronized` 关键字用于**同步线程对共享资源的访问**，防止数据竞争（race conditions）。
 ```java
-synchronized (someObject) {
+// 1 synchronized-Block
+
+synchronized (Object o ) {
     // 只能一个线程进入这个代码块（如果锁的是同一个对象）
+    keine int, string, ...  , nur Object, weil nur Object kann referenziert werden  
+}
+
+
+// 2 Ganze Methoden Synchroniseiren 
+sysnchronized void getRessource(){
+// do something 
 }
 ```
+
+
+Welche Daten Type is  subclass von object 
+Object -> Number -> String, Integer, Sting, .... 
 
 
 A synchronized block always requires an object to “lock” on; typically, one uses the object which shall be modified as lock.
@@ -485,6 +506,27 @@ We can also synchronize methods, which is equivalent to syncing on “this“ or
 
 ![[Pasted image 20250416155307.png]]
 
+
+synchronized void add ()
+等效于 
+void add () {
+	synchronized (this)
+}
+
+synchronized (this) 就是 整个 object (这个 object 中的 任何的 property 都锁住了)
+
+
+
+
+## 3.2 synchronzied block und method 
+
+
+
+## 3.3 this  ?? 
+
+synchronzied (this )
+
+schnchronzied this Object,  das Object ein object of them classs.  alle Property des Object wird synchronzied benuzten 
 
 # 4 notify and wait 
 

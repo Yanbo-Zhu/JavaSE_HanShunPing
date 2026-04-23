@@ -4,8 +4,7 @@
 
 ==Dependency Injection is a design pattern where object creation and using the object are separated from each other.==
 
-An object receives all other objects it depends on as parameter, so the object itself does not need to “know”
-how to construct the object it depends on. Instead, the objects are provided by an Injector.
+An object receives all other objects it depends on as parameter, so the object itself does not need to “know” how to construct the object it depends on. Instead, the objects are provided by an Injector.
 
 
 It sounds complicated but is pretty easy: give an object its instance variables without writing explicit newcalls. Dependency Injection has multiple advantages:
@@ -24,6 +23,7 @@ It sounds complicated but is pretty easy: give an object its instance variables 
     易于测试（可以用 Mock 对象替代真实依赖）
 
     更灵活地管理对象生命周期（特别是在大型项目中）
+
 
 
 ----
@@ -142,4 +142,244 @@ Welcome to the BurgerShop
 Try out our tasty sugar drink!
 Try this tasty burger! Burger(text=High Quality Burger!)
 Burger(text=High Quality Burger!)
+```
+
+
+
+
+## 1.3 例子3 
+
+
+我们有一个 Calaculator Class 
+implement eine java Interface,  这个interface 可以 用来实现 一个 inputvalueClasse
+
+![](image/0237980a2cc5c9cf424eded2dc72af3.jpg)
+
+![](image/a97d9f77e4e0739b345448e9c56f2af.jpg)
+
+
+
+In dieser Aufgabe sollen Sie eine Klasse Calculator erstellen, die interaktiv Nutzereingaben von der Konsole einliest und einfache mathematische Operationen unterst¨utzt. Damit Sie den Calculator testen k¨onnen, soll dieser nicht direkt User-Input einlesen, sondern ein Interface UserInput benutzen. Mittels Dependency Injection k¨onnen Sie dann f¨ur die interaktive Nutzung die Klasse ConsoleUserInput nutzen, die User-Input direkt von der Konsole einliest. Um Tests zu vereinfachen, erstellen Sie auch eine Klasse
+PredefinedInput, die im Konstruktor bereits die Werte ¨ubergeben bekommt, die sie zur¨uckgeben soll. Gehen Sie dabei in folgenden Schritten vor:
+
+• Erstellen Sie das Interface UserInput mit den Methoden
+String getString(String query);
+double getDouble(String query);
+void outputError(String error);
+
+• Erstellen Sie die Klasse ConsoleUserInput und implementieren Sie das Interface UserInput.
+
+• Implementieren Sie die Methoden, indem Sie von einem new Scanner(System.in) die Methode
+nextLine() verwenden und diese f¨ur die Methode getDouble mit Double.parseDouble() kombi-
+nieren.
+
+• Erstellen Sie eine weitere Klasse PredefinedInput, die auch UserInput implementiert. Die Klasse
+soll die zwei folgenden Instanzvariablen besitzen:
+```
+Stack<String> stringStack;
+Stack<Double> doubleStack;
+```
+In diesen Stacks solle alle Inputs gespeichert werden, die f¨ur einen Test ben¨otigt werden. Dann m¨ussen
+diese nicht per Konsole eingelesen werden.
+
+• Erstellen Sie einen Konstruktor, der String[] und Double[] akzeptiert und diese mit Hilfe von
+Collections.addAll() zu den Stacks hinzuf¨ugt.
+
+• Implementieren Sie die vom Interface vorgegebenen Methoden mittels Stack.pop().
+
+• Erstellen Sie nun eine Klasse Calculator, die einen UserInput im Konstruktor ¨ubergeben bekommt.
+
+• Implementieren Sie eine (triviale) Methode, in der mit Hilfe von UserInput ein String als Operator
+und zwei Doubles als Operanden eingelsen werden. Wenn alle Inputs g¨ultig sind, soll ein String,
+der die Operation zusammenfasst zur¨uckgegeben werden. Wenn ein Input ung¨ultig ist, soll null
+zur¨uckgegeben werden.
+
+• Schreiben Sie eine main-Methode, die den interaktiven Modus des Calculator benutzt.
+
+• Schreiben Sie Unit-Tests, in denen Sie PredefinedInput benutzen
+
+
+
+这道题要求你创建一个交互式的计算器类 `Calculator`，该类通过控制台读取用户输入并执行简单的数学操作。为了便于测试，这个类不应直接从控制台读取用户输入，而是通过一个接口 `UserInput` 来获取输入。具体步骤如下：
+
+
+
+- `UserInput` 接口
+    
+- 控制台输入实现：`ConsoleUserInput`
+    
+- 测试用预定义输入实现：`PredefinedInput`
+    
+- 核心逻辑类：`Calculator`
+    
+- 启动程序的 `main` 方法
+    
+- 示例单元测试类（不依赖 JUnit，只是展示用）
+
+
+
+UserInput.java
+```
+public interface UserInput {
+    String getString(String query);
+    double getDouble(String query);
+    void outputError(String error);
+}
+
+```
+
+
+
+ConsoleUserInput.java
+
+```
+import java.util.Scanner;
+
+public class ConsoleUserInput implements UserInput {
+    private final Scanner scanner = new Scanner(System.in);
+
+    @Override
+    public String getString(String query) {
+        System.out.print(query);
+        return scanner.nextLine();
+    }
+
+    @Override
+    public double getDouble(String query) {
+        System.out.print(query);
+        try {
+            return Double.parseDouble(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            outputError("Ungültige Zahl.");
+            throw e;
+        }
+    }
+
+    @Override
+    public void outputError(String error) {
+        System.out.println("Fehler: " + error);
+    }
+}
+
+```
+
+
+PredefinedInput.java
+```
+import java.util.Collections;
+import java.util.Stack;
+
+public class PredefinedInput implements UserInput {
+    private final Stack<String> stringStack = new Stack<>();
+    private final Stack<Double> doubleStack = new Stack<>();
+
+    public PredefinedInput(String[] strings, Double[] doubles) {
+        // 先添加再 reverse，因为 Stack 是后进先出
+        Collections.addAll(stringStack, strings);
+        Collections.reverse(stringStack);
+
+        Collections.addAll(doubleStack, doubles);
+        Collections.reverse(doubleStack);
+    }
+
+    @Override
+    public String getString(String query) {
+        return stringStack.pop();
+    }
+
+    @Override
+    public double getDouble(String query) {
+        return doubleStack.pop();
+    }
+
+    @Override
+    public void outputError(String error) {
+        System.out.println("Fehler (Test): " + error);
+    }
+}
+
+```
+
+
+Calculator.java
+```
+public class Calculator {
+    private final UserInput userInput;
+
+    public Calculator(UserInput userInput) {
+        this.userInput = userInput;
+    }
+
+    public String run() {
+        try {
+            String operator = userInput.getString("Operator (+, -, *, /): ");
+            double a = userInput.getDouble("Erste Zahl: ");
+            double b = userInput.getDouble("Zweite Zahl: ");
+
+            double result;
+            switch (operator) {
+                case "+":
+                    result = a + b; break;
+                case "-":
+                    result = a - b; break;
+                case "*":
+                    result = a * b; break;
+                case "/":
+                    if (b == 0) {
+                        userInput.outputError("Division durch 0 ist nicht erlaubt.");
+                        return null;
+                    }
+                    result = a / b; break;
+                default:
+                    userInput.outputError("Unbekannter Operator: " + operator);
+                    return null;
+            }
+
+            return a + " " + operator + " " + b + " = " + result;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}
+
+```
+
+Main.java
+```
+public class Main {
+    public static void main(String[] args) {
+        UserInput consoleInput = new ConsoleUserInput();
+        Calculator calculator = new Calculator(consoleInput);
+        String result = calculator.run();
+
+        if (result != null) {
+            System.out.println("Ergebnis: " + result);
+        } else {
+            System.out.println("Berechnung fehlgeschlagen.");
+        }
+    }
+}
+
+```
+
+
+示例测试类（`CalculatorTest.java`
+```
+public class CalculatorTest {
+    public static void main(String[] args) {
+        String[] stringInputs = { "+" };
+        Double[] doubleInputs = { 3.0, 4.0 };
+
+        UserInput testInput = new PredefinedInput(stringInputs, doubleInputs);
+        Calculator calculator = new Calculator(testInput);
+        String result = calculator.run();
+
+        if ("3.0 + 4.0 = 7.0".equals(result)) {
+            System.out.println("✅ Test erfolgreich!");
+        } else {
+            System.out.println("❌ Test fehlgeschlagen: " + result);
+        }
+    }
+}
+
 ```
